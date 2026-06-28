@@ -1,0 +1,55 @@
+.rating-filter {
+  padding: 5px 0;
+}
+
+.rating-filter__stars-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-filter__star-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.15s ease;
+}
+
+.rating-filter__star-icon:hover {
+  transform: scale(1.15);
+}
+
+.rating-filter__star-filled {
+  color: #faaf00;
+  font-size: 28px !important;
+}
+
+.rating-filter__star-empty {
+  color: black;
+  font-size: 28px !important;
+}
+
+.rating-filter__value {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+
+/* Dark theme (BrandFilter / search-brand-page) */
+.brand-sidebar .rating-filter__star-empty {
+  color: black;
+}
+
+.brand-sidebar .rating-filter__value {
+  color: #dfdfdf;
+}
+
+/* Light theme (Filter / search-page) */
+.sidebar .rating-filter__star-empty {
+  color: #d1d5db;
+}
+
+.sidebar .rating-filter__value {
+  color: #4a4a4a;
+}

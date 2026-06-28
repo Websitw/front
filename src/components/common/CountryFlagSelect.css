@@ -1,0 +1,181 @@
+/* Country Flag Select Container */
+.country-flag-select-container {
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+}
+
+/* Label */
+.country-flag-select-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #151515;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+}
+
+.country-flag-select-required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+/* Select Box */
+.country-flag-select-box {
+  height: 48px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.country-flag-select-box:hover {
+  border-color: #9ca3af;
+}
+
+.country-flag-select-box.disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.country-flag-select-box.error {
+  border-color: #dc2626;
+}
+
+/* Select Value */
+.country-flag-select-value {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 400;
+}
+
+.country-flag-select-placeholder {
+  color: #9ca3af;
+}
+
+/* Flag Image */
+.country-flag-img {
+  width: 32px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+/* Arrow Icon */
+.country-flag-select-arrow {
+  transition: transform 0.2s ease;
+  color: #6b7280;
+}
+
+.country-flag-select-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.country-flag-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown Item */
+.country-flag-dropdown-item {
+  padding: 12px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: background-color 0.15s ease;
+}
+
+.country-flag-dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.country-flag-dropdown-item.selected {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.country-flag-dropdown-item:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.country-flag-dropdown-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Empty State */
+.country-flag-dropdown-empty {
+  padding: 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Error Message */
+.country-flag-select-error {
+  display: block;
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 4px;
+}
+
+/* Scrollbar Styling */
+.country-flag-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.country-flag-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.country-flag-dropdown::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 8px;
+}
+
+.country-flag-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

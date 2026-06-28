@@ -1,0 +1,87 @@
+.currency-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.currency-input__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #151515;
+}
+
+.currency-input__wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #b4b4b4;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  height: 40px;
+}
+
+.currency-input__wrapper--error {
+  border-color: #d32f2f;
+}
+
+.currency-input__prefix {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 10px;
+  background-color: #f2f4f7;
+  border-right: 1px solid #b4b4b4;
+  height: 100%;
+  flex-shrink: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #151515;
+}
+
+.currency-input__flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.currency-input__currency {
+  white-space: nowrap;
+}
+
+.currency-input__field {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #151515;
+  background: transparent;
+  min-width: 0;
+}
+
+.currency-input__field::placeholder {
+  color: #818181;
+}
+
+.currency-input__suffix {
+  padding: 0 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #818181;
+  flex-shrink: 0;
+  border-left: 1px solid #b4b4b4;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.currency-input__error {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #d32f2f;
+}

@@ -1,0 +1,140 @@
+.form-search-select-wrapper {
+  width: 100%;
+}
+
+.form-search-select-wrapper .MuiAutocomplete-root {
+  width: 100%;
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-root {
+  padding: 0 !important;
+  min-height: 48px;
+  font-size: var(--font-size-sm);
+  border-radius: 5px !important;
+  transition: all 0.2s ease;
+  border: 1px solid #B4B4B4 !important;
+}
+
+.form-search-select-bordered .MuiOutlinedInput-root {
+  border: 1px solid var(--color-gray-100) !important;
+  border-radius: 5px !important;
+}
+
+.form-search-select-borderless .MuiOutlinedInput-root {
+  border: none !important;
+}
+
+.form-search-select-error .MuiOutlinedInput-root {
+  border-color: var(--color-error-alt) !important;
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-root.Mui-disabled {
+  background-color: var(--color-gray-30);
+  color: var(--color-gray-300);
+  cursor: not-allowed;
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-root fieldset {
+  border: none !important;
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-root:hover fieldset {
+  border: none !important;
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-root.Mui-focused fieldset {
+  border: none !important;
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-input {
+  padding: 0.625rem 0.875rem !important;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-darkest);
+}
+
+.form-search-select-wrapper .MuiOutlinedInput-input::placeholder {
+  color: var(--color-placeholder);
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.form-search-select-wrapper .MuiAutocomplete-endAdornment {
+  right: 0.875rem !important;
+}
+
+[dir="rtl"] .form-search-select-wrapper .MuiAutocomplete-endAdornment {
+  right: auto !important;
+  left: 0.875rem !important;
+}
+
+.form-search-select-wrapper .MuiAutocomplete-clearIndicator {
+  color: var(--color-gray-300);
+  margin-right: 4px;
+}
+
+.form-search-select-wrapper .MuiAutocomplete-popupIndicator {
+  padding: 2px;
+}
+
+.form-search-select-wrapper .MuiAutocomplete-popupIndicator:hover {
+  background-color: transparent;
+}
+
+.form-search-select-dropdown {
+  margin-top: 0.25rem !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--color-gray-100) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.form-search-select-dropdown .MuiAutocomplete-listbox {
+  padding: 0;
+  max-height: 240px;
+}
+
+.form-search-select-dropdown .MuiAutocomplete-option {
+  padding: 0.625rem 0.875rem !important;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-darkest);
+  transition: background-color 0.2s ease;
+}
+
+.form-search-select-dropdown .MuiAutocomplete-option[aria-selected="true"] {
+  background-color: var(--color-primary-light) !important;
+}
+
+.form-search-select-dropdown .MuiAutocomplete-option.Mui-focused {
+  background-color: var(--color-gray-10) !important;
+}
+
+.form-search-select-dropdown .MuiAutocomplete-option:hover {
+  background-color: var(--color-gray-10) !important;
+}
+
+.form-search-select-dropdown .MuiAutocomplete-noOptions {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-300);
+  padding: 0.625rem 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .form-search-select-wrapper .MuiOutlinedInput-root {
+    min-height: 40px;
+  }
+
+  .form-search-select-wrapper .MuiOutlinedInput-input {
+    padding: 0.5rem 0.75rem !important;
+    font-size: var(--font-size-xs);
+  }
+
+  .form-search-select-wrapper .MuiOutlinedInput-input::placeholder {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .form-search-select-wrapper .MuiOutlinedInput-input {
+    padding: 0.5rem 0.625rem !important;
+  }
+}

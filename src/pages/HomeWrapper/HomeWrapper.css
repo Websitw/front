@@ -1,0 +1,10 @@
+.home-wrapper-segment-screen{
+    /* background-color: red !important; */
+}
+
+.sawa-deails-container{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* background-color: red; */
+}

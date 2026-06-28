@@ -1,0 +1,19 @@
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.toggle-row__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #151515;
+}
+
+.toggle-row .MuiSwitch-root {
+  margin-bottom: 0;
+}

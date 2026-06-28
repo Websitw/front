@@ -1,0 +1,269 @@
+.share-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: shareFadeIn 0.2s ease-out;
+}
+
+@keyframes shareFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shareScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.share-modal-container {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 436px;
+  padding: 24px 20px;
+  position: relative;
+  animation: shareScaleIn 0.25s ease-out;
+  box-shadow: 0px 2px 4px 0px #00000040;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.share-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.share-modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+  margin: 0;
+}
+
+.share-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #000000;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.share-modal-close:hover {
+  background: #f0f0f0;
+}
+
+.share-modal-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+.share-social-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.share-social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  min-width: 65px;
+  transition: opacity 0.15s ease;
+}
+
+.share-social-item:hover {
+  opacity: 0.8;
+}
+
+.share-social-item:active {
+  transform: scale(0.96);
+}
+
+.share-social-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.share-social-item:hover .share-social-icon {
+  background: #ebebeb;
+}
+
+.share-social-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #000000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.share-modal-divider {
+  width: 100%;
+  height: 1px;
+  background: #B4B4B4;
+  margin-bottom: 16px;
+}
+
+.share-copy-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  margin: 0 0 12px 0;
+}
+
+.share-copy-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 38px;
+  background: #B4B4B454;
+  border-radius: 5px;
+  padding: 0 10px;
+  gap: 8px;
+}
+
+.share-copy-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  color: #787878;
+  line-height: 38px;
+  min-width: 0;
+}
+
+.share-copy-input::placeholder {
+  color: #787878;
+}
+
+.share-copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.share-copy-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 480px) {
+  .share-modal-container {
+    padding: 20px 16px;
+  }
+
+  .share-modal-title {
+    font-size: 18px;
+  }
+
+  .share-modal-subtitle {
+    font-size: 16px;
+  }
+
+  .share-social-row {
+    gap: 8px;
+  }
+
+  .share-social-item {
+    min-width: 56px;
+  }
+
+  .share-social-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .share-social-label {
+    font-size: 12px;
+  }
+
+  .share-copy-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .share-modal-overlay {
+    padding: 12px;
+  }
+
+  .share-modal-container {
+    padding: 16px 12px;
+  }
+
+  .share-social-row {
+    gap: 4px;
+  }
+
+  .share-social-item {
+    min-width: 48px;
+  }
+
+  .share-social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .share-social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .share-social-label {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,155 @@
+.brand-tooltip {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+  text-align: start;
+  -webkit-appearance: none;
+  appearance: none;
+  gap: 4px;
+}
+
+.brand-tooltip__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.brand-text {
+  font-size: 18px;
+  line-height: 0.9;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.brand-arrows {
+  display: flex;
+  margin-top: 5px;
+}
+
+.brand-tooltip--desktop {
+  position: fixed;
+  top: 40px;
+  inset-inline-start: 62px;
+  width: 100%;
+  max-width: 92px;
+  min-height: 75px;
+  max-height: 75px;
+  margin-inline-start: 18px;
+  padding: 7px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-start-end-radius: 6px;
+  border-end-end-radius: 6px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.brand-tooltip--desktop:hover,
+.brand-tooltip--desktop:focus-visible {
+  background-color: #239a98;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+  outline: none;
+}
+
+.brand-tooltip--mobile {
+  display: none;
+}
+
+.brand-tooltip__segment {
+  width: 100%;
+  min-width: 0;
+  min-height: 31px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.1;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.brand-tooltip__segment--active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.brand-tooltip__segment:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.brand-tooltip__segment--active:hover {
+  background-color: #239a98;
+}
+
+.brand-tooltip__segment:active {
+  transform: translateY(1px);
+}
+
+.brand-tooltip__segment:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(43, 169, 168, 0.36),
+    0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 768px) {
+  .brand-tooltip--desktop {
+    display: none;
+  }
+
+  .brand-tooltip--mobile {
+    position: static;
+    display: inline-flex;
+    min-height: 36px;
+    padding: 3px;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    border-radius: 8px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 20px rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(12px);
+    white-space: nowrap;
+  }
+
+  .brand-tooltip--mobile:hover,
+  .brand-tooltip--mobile:focus-visible {
+    outline: none;
+  }
+
+  .brand-tooltip--mobile .brand-tooltip__segment {
+    min-width: 48px;
+    min-height: 30px;
+    padding: 0 10px;
+  }
+}
+
+body[dir="rtl"] .brand-arrows {
+  transform: scaleX(-1);
+}

@@ -1,0 +1,127 @@
+/* ── LoadingIndicator ── */
+
+.loading-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-indicator__spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-indicator__svg {
+  animation: loading-indicator-rotate 1.4s linear infinite;
+}
+
+.loading-indicator__track {
+  stroke: rgba(0, 0, 0, 0.08);
+}
+
+.loading-indicator__circle {
+  stroke-dasharray: 80, 200;
+  stroke-dashoffset: 0;
+  animation: loading-indicator-dash 1.4s ease-in-out infinite;
+}
+
+.loading-indicator__text {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* ── Sizes ── */
+
+.loading-indicator--xs .loading-indicator__svg {
+  width: 16px;
+  height: 16px;
+}
+
+.loading-indicator--sm .loading-indicator__svg {
+  width: 24px;
+  height: 24px;
+}
+
+.loading-indicator--md .loading-indicator__svg {
+  width: 36px;
+  height: 36px;
+}
+
+.loading-indicator--lg .loading-indicator__svg {
+  width: 48px;
+  height: 48px;
+}
+
+/* ── Colors ── */
+
+.loading-indicator--primary .loading-indicator__circle {
+  stroke: #0d7c85;
+}
+
+.loading-indicator--white .loading-indicator__circle {
+  stroke: #ffffff;
+}
+
+.loading-indicator--white .loading-indicator__track {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.loading-indicator--error .loading-indicator__circle {
+  stroke: #d83020;
+}
+
+.loading-indicator--gray .loading-indicator__circle {
+  stroke: #999;
+}
+
+/* ── Fullscreen ── */
+
+.loading-indicator__fullscreen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: 10000;
+}
+
+/* ── Overlay (relative parent) ── */
+
+.loading-indicator__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(1px);
+  border-radius: inherit;
+  z-index: 5;
+}
+
+/* ── Animations ── */
+
+@keyframes loading-indicator-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-indicator-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}

@@ -1,0 +1,304 @@
+.merchant-navbar-wrapper {
+  width: 100%;
+  /* margin-bottom: 25px;  */
+  margin-top: 1rem;
+
+}
+
+.merchant-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.merchant-navbar-logo-section {
+  display: flex;
+  align-items: center;
+  min-width: 80px;
+}
+
+.merchant-navbar-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.merchant-navbar-search-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 418px;
+  margin-left: 24px;
+}
+
+.merchant-navbar-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 40px;
+  padding: 5px 16px 5px 12px;
+  background-color: var(--color-white);
+  border: 1px solid #B4B4B4;
+  border-radius: 8px;
+}
+
+.merchant-navbar-search-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #374151;
+  width: 100%;
+  line-height: 1;
+}
+
+.merchant-navbar-search-input::placeholder {
+  color: #818181;
+  font-size: 16px;
+}
+
+.merchant-navbar-actions-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.merchant-navbar-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.merchant-navbar-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.merchant-navbar-icon-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Divider */
+.merchant-navbar-divider {
+  width: 1px;
+  height: 28px;
+  background-color: #e5e7eb;
+  margin: 0 6px;
+}
+
+/* Profile */
+.merchant-navbar-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.merchant-navbar-profile-section:hover {
+  background-color: #f3f4f6;
+}
+
+.merchant-navbar-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #0d7377;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.merchant-navbar-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.3;
+}
+
+.merchant-navbar-profile-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.merchant-navbar-profile-role {
+  font-size:14px;
+  color: #8B8B8B;
+  white-space: nowrap;
+}
+
+/* Plan Badge */
+.merchant-navbar-plan-badge {
+  padding: 4px 12px;
+  cursor: pointer;
+
+}
+
+.merchant-navbar-plan-text {
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #F3F3F3;
+  color: var(--color-primary);
+  white-space: nowrap;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.merchant-navbar-plan-badge:hover .merchant-navbar-plan-text {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .merchant-navbar {
+    padding: 0 16px;
+  }
+
+  .merchant-navbar-search-section {
+    min-width: 250px;
+    margin-left: 16px;
+  }
+
+  .merchant-navbar-actions-section {
+    gap: 6px;
+  }
+
+  .merchant-navbar-divider {
+    margin: 0 4px;
+  }
+
+  .merchant-navbar-profile-section {
+    gap: 8px;
+    padding: 4px 6px;
+  }
+
+  .merchant-navbar-plan-badge {
+    padding: 4px 8px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .merchant-navbar {
+    padding: 0 12px;
+  }
+
+  .merchant-navbar-logo-section {
+    min-width: auto;
+  }
+
+  .merchant-navbar-search-section {
+    min-width: 0;
+    flex: 1;
+    margin-left: 12px;
+    max-width: 200px;
+  }
+
+  .merchant-navbar-search-box {
+    padding: 5px 8px;
+  }
+
+  .merchant-navbar-search-input::placeholder {
+    font-size: 14px;
+  }
+
+  .merchant-navbar-actions-section {
+    gap: 4px;
+  }
+
+  .merchant-navbar-icon-group {
+    gap: 0;
+  }
+
+  .merchant-navbar-icon-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Hide middle icon (Messages) on mobile */
+  .merchant-navbar-icon-group .merchant-navbar-icon-button:nth-child(2) {
+    display: none;
+  }
+
+  .merchant-navbar-divider {
+    margin: 0 2px;
+  }
+
+  /* Hide profile info text, keep only avatar and chevron */
+  .merchant-navbar-profile-info {
+    display: none;
+  }
+
+  .merchant-navbar-profile-section {
+    gap: 6px;
+    padding: 4px;
+  }
+
+  /* Hide plan badge on mobile */
+  .merchant-navbar-plan-badge {
+    display: none;
+  }
+
+  /* Hide last divider before plan badge */
+  .merchant-navbar-actions-section > .merchant-navbar-divider:last-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .merchant-navbar {
+    padding: 0 8px;
+  }
+
+  .merchant-navbar-search-section {
+    margin-left: 8px;
+    max-width: 150px;
+  }
+
+  .merchant-navbar-search-box {
+    height: 36px;
+    padding: 4px 6px;
+    gap: 6px;
+  }
+
+  .merchant-navbar-search-input::placeholder {
+    font-size: 13px;
+  }
+
+  .merchant-navbar-icon-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .merchant-navbar-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .merchant-navbar-avatar svg {
+    width: 16px;
+    height: 16px;
+  }
+}

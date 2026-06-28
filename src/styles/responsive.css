@@ -1,0 +1,394 @@
+html {
+  min-width: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+#root {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@supports not (overflow-x: clip) {
+  body,
+  #root {
+    overflow-x: hidden;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+.user-layout-content,
+.dashboard-container,
+.dashboard-content {
+  min-width: 0;
+}
+
+.dashboard-content,
+.user-layout-content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboard-content > *,
+.user-layout-content > * {
+  max-width: 100%;
+}
+
+.dashboard-content :where([class$="__table-wrapper"], .table-wrapper, .currency-table-wrapper),
+.user-layout-content :where([class$="__table-wrapper"], .table-wrapper, .currency-table-wrapper) {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-content :where([class$="__table"], table),
+.user-layout-content :where(.table-wrapper table, [class$="__table"]) {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container-max,
+  .home-container {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .grid-list,
+  .product-grid,
+  .cards-grid,
+  .image-uploader__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important;
+    gap: 20px !important;
+  }
+
+  .dashboard-content :where([class$="__card"], .card),
+  .user-layout-content :where([class$="__card"], .card) {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .home-container {
+    padding: 16px;
+  }
+
+  .user-layout-content {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 64px !important;
+    padding-bottom: 24px;
+  }
+
+  .dashboard-container,
+  .dashboard-container-ltr,
+  .dashboard-container-rtl {
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    overflow-x: hidden;
+  }
+
+  .dashboard-content,
+  .dashboard-content-ltr,
+  .dashboard-content-rtl,
+  .mercahnt-dashboard-content-ltr {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 72px 12px 16px !important;
+  }
+
+  .dashboard-content :where(
+      .brand-mgmt,
+      .cat-mgmt,
+      .seg-mgmt,
+      .global-attributes,
+      .merchants,
+      .users-page,
+      .cms-page,
+      .platform-setting,
+      .onboarding-documents,
+      .manage-agreements
+    ) {
+    width: 100%;
+    padding: 16px 0 !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__header"],
+      [class$="__header-section"],
+      .account-home-header,
+      .search-toolbar,
+      .products-filters-row
+    ) {
+    min-width: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__filters"],
+      .filters,
+      .store-filters,
+      .products-filters-row,
+      .search-toolbar,
+      .search-controls,
+      .account-tabs,
+      .card-actions,
+      .modal-footer,
+      .drawer-footer
+    ),
+  .user-layout-content :where(
+      [class$="__filters"],
+      .filters,
+      .store-filters,
+      .products-filters-row,
+      .search-toolbar,
+      .search-controls,
+      .account-tabs,
+      .card-actions,
+      .modal-footer,
+      .drawer-footer
+    ) {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .dashboard-content :where(
+      [class$="__filters"],
+      .filters,
+      .store-filters,
+      .products-filters-row
+    ),
+  .user-layout-content :where(
+      [class$="__filters"],
+      .filters,
+      .store-filters,
+      .products-filters-row
+    ) {
+    flex-direction: column !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__search-box"],
+      .search-box,
+      .merchant-navbar-search-box,
+      .sort-select-wrapper
+    ),
+  .user-layout-content :where(
+      [class$="__search-box"],
+      .search-box,
+      .merchant-navbar-search-box,
+      .sort-select-wrapper
+    ) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__search-input"],
+      .search-box input,
+      .search-input,
+      .sort-select,
+      input,
+      select,
+      textarea
+    ),
+  .user-layout-content :where(
+      [class$="__search-input"],
+      .search-box input,
+      .search-input,
+      .sort-select,
+      input,
+      select,
+      textarea
+    ) {
+    width: 100% !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__card"],
+      [class$="__content"],
+      .card,
+      .brand-mgmt__card,
+      .cat-mgmt__card,
+      .seg-mgmt__card,
+      .segment-container
+    ),
+  .user-layout-content :where(
+      [class$="__card"],
+      [class$="__content"],
+      .card,
+      .segment-container
+    ) {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .dashboard-content :where([class$="__table"], table),
+  .user-layout-content :where(.table-wrapper table, [class$="__table"]) {
+    min-width: 680px;
+  }
+
+  .dashboard-content :where([class$="__table-wrapper"], .table-wrapper, .currency-table-wrapper),
+  .user-layout-content :where([class$="__table-wrapper"], .table-wrapper, .currency-table-wrapper) {
+    border-radius: 8px;
+    overflow-x: auto !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__drawer"],
+      [class$="__drawer-content"],
+      .drawer-content,
+      .modal,
+      .MuiDialog-paper,
+      .MuiDrawer-paper
+    ),
+  .user-layout-content :where(
+      [class$="__drawer"],
+      [class$="__drawer-content"],
+      .drawer-content,
+      .modal,
+      .MuiDialog-paper,
+      .MuiDrawer-paper
+    ) {
+    width: min(100%, 560px) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  .dashboard-content :where(
+      [class$="__drawer"],
+      .brand-mgmt__drawer,
+      .cat-mgmt__drawer,
+      .seg-mgmt__drawer
+    ) {
+    right: calc(-100vw - 24px);
+  }
+
+  .dashboard-content :where(
+      [class$="__drawer--open"],
+      .brand-mgmt__drawer--open,
+      .cat-mgmt__drawer--open,
+      .seg-mgmt__drawer--open
+    ) {
+    right: 0;
+  }
+
+  .overlay,
+  .overlay-less {
+    justify-content: center;
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  .cart-page {
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .cart-page__modal-overlay,
+  .cart-page__login-overlay {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  .cart-page__modal-container {
+    max-height: calc(100vh - 24px);
+    border-radius: 8px;
+  }
+
+  .search-page-wrapper .search-layout {
+    display: block !important;
+  }
+
+  .search-page-wrapper .Search-page-wrapper {
+    width: 100%;
+    padding: 16px !important;
+  }
+
+  .search-page-wrapper .sidebar {
+    max-width: 100vw;
+    padding-bottom: 80px;
+  }
+
+  .search-page-wrapper .search-page .grid-list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)) !important;
+    padding: 0 !important;
+  }
+
+  .toast-container {
+    right: 12px;
+    left: 12px;
+    top: 76px;
+  }
+
+  .toast {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-max,
+  .home-container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .grid-list,
+  .product-grid,
+  .cards-grid,
+  .image-uploader__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dashboard-content,
+  .dashboard-content-ltr,
+  .dashboard-content-rtl,
+  .mercahnt-dashboard-content-ltr {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  .dashboard-content :where([class$="__title"], h1),
+  .user-layout-content :where([class$="__title"], h1) {
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-content :where([class$="__btn-add"], button),
+  .user-layout-content :where([class$="__btn-add"], button) {
+    width: 100%;
+    justify-content: center;
+  }
+}

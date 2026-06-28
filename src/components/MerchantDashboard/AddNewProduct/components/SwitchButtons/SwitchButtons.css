@@ -1,0 +1,37 @@
+.switch-btns {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 20px;
+    background-color: #F5F5F5;
+    justify-content: flex-end;
+    border-radius: 5px;
+    border: 1px solid #B4B4B4;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.switch-btns .switch-per-btn,
+.switch-btns .switch-next-btn {
+    cursor: pointer;
+
+    border-radius: 20px;
+    border-width: 1px;
+    padding-top: 16px;
+    padding-right: 8px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    max-width: 167px;
+    width: 100%;
+    color: #151515;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+
+}
+.switch-btns .switch-next-btn{
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}

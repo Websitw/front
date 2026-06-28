@@ -1,0 +1,85 @@
+.search-category-brand-main {
+  background-color: #404040;
+  /* padding: 30px; */
+  /* background-color: red; */
+  display: flex;
+
+  .back-link {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 140%;
+    letter-spacing: 0%;
+
+    cursor: pointer;
+    color: #0695EB;
+  }
+
+  .categroy-output {
+    /* background-color: red; */
+
+    margin: 50px 0px;
+
+    h2 {
+
+      color: #FFF;
+      margin-bottom: 22px;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 32px;
+      leading-trim: NONE;
+      line-height: Icon/Small;
+      letter-spacing: 0px;
+
+
+    }
+  }
+
+  .results-text {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #FFF;
+
+    .highlight {
+
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 16px;
+      leading-trim: NONE;
+      line-height: 140%;
+      color: #32A2A6;
+      letter-spacing: 0%;
+    }
+
+
+
+    /* font-family: Roboto;
+
+ */
+
+  }
+
+  .search-header {
+    border-bottom: 1px solid #CBCBCB80;
+  }
+
+
+
+  .brand-slider__swiper {
+    padding: 0 !important;
+  }
+
+  .brand-slider__slide {
+    width: auto !important;
+    /* padding: 0 10px !important; */
+    margin: 0 10px !important;
+  }
+
+
+
+}

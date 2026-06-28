@@ -1,0 +1,206 @@
+.barnd-template-ads {
+    padding: 25px;
+
+    .ad-banner-brand {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease, transform 0.2s ease;
+      }
+      
+      
+      .ad-banner__image-container {
+        flex: 0 0 260px;
+        height: 214px;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        overflow: hidden;
+      }
+      
+      .ad-banner__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      
+      
+      .ad-banner__content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 48px 24px 60px;
+        gap: 40px;
+      }
+      
+      .ad-banner__text-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      
+      .ad-banner__discount-value {
+        font-size: clamp(90px, 8vw, 110px);
+        font-weight: 400;
+        color: #fff;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: -2px;
+        white-space: nowrap;
+      }
+      
+      .ad-banner__text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      
+      .ad-banner__discount-label {
+        font-size: clamp(28px, 3vw, 50px);
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: #fff;
+        margin: 0;
+        line-height: 1.2;
+      }
+      
+      .ad-banner__subtitle {
+        font-size: clamp(14px, 1.5vw, 20px);
+        font-weight: 500;
+        color: #fff;
+        margin: 0;
+        line-height: 1.4;
+      }
+      
+      .ad-banner__cta-wrapper {
+        display: flex;
+        align-items: flex-end;
+      }
+      
+      .ad-banner__cta-button {
+        min-width: 200px;
+        padding: 12px 40px;
+        background: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 62px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .ad-banner__cta-button:hover {
+        background: #ffffff;
+        color: #000;
+      }
+      
+      
+      @media (max-width: 1200px) {
+        .ad-banner__image-container {
+          flex: 0 0 220px;
+        }
+      
+        .ad-banner__content {
+          padding: 20px 30px;
+          gap: 20px;
+        }
+      
+        .ad-banner__discount-value {
+          font-size: 64px;
+        }
+      
+        .ad-banner__discount-label {
+          font-size: 24px;
+        }
+      }
+      
+      @media (max-width: 992px) {
+        .ad-banner__image-container {
+          flex: 0 0 180px;
+        }
+      
+        .ad-banner__content {
+          padding: 16px 20px;
+        }
+      
+        .ad-banner__discount-value {
+          font-size: 48px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .ad-banner-brand {
+          flex-direction: column;
+        }
+      
+        .ad-banner__image-container {
+          width: 100%;
+          height: 180px;
+        }
+      
+        .ad-banner__content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+          gap: 16px;
+        }
+      
+        .ad-banner__text-wrapper {
+          flex-direction: column;
+        }
+      
+        .ad-banner__cta-button {
+          width: 100%;
+          max-width: 260px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .ad-banner__image-container {
+          height: 150px;
+        }
+      
+        .ad-banner__discount-value {
+          font-size: 40px;
+        }
+      
+        .ad-banner__discount-label {
+          font-size: 18px;
+        }
+      }
+      
+      
+      [dir="rtl"] .ad-banner__content {
+        padding: 24px 60px 24px 48px;
+      }
+      
+      [dir="rtl"] .ad-banner__text-wrapper {
+        flex-direction: row-reverse;
+      }
+      
+      @media (max-width: 768px) {
+        [dir="rtl"] .ad-banner__text-wrapper {
+          flex-direction: column;
+        }
+      }
+      
+      
+      .ad-banner--dark {
+        background-color: #1a1a1a;
+      }
+      
+      .ad-banner--dark .ad-banner__discount-value {
+        color: #aaa;
+      }
+      
+      .ad-banner--dark .ad-banner__cta-button:hover {
+        color: #1a1a1a;
+      }
+  }
+  
+  
+ 

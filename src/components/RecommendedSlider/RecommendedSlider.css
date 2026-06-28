@@ -1,0 +1,13 @@
+.recommended-slider-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+
+    .recommended-slider-section{
+     display: none;
+    }
+
+}

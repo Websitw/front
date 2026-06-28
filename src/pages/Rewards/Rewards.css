@@ -1,0 +1,5 @@
+.rewards-container{
+    width: calc(100% - var(--modal-width));
+    margin-left: var(--modal-width);
+    padding: 20px 20px;
+}

@@ -1,0 +1,262 @@
+.favorite-brand-container {
+    width: calc(100% - var(--modal-width));
+    margin-left: var(--modal-width);
+    padding: 32px 40px;
+
+    .page-title {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 34px;
+        color: #4A4A4A;
+        leading-trim: NONE;
+        line-height: Icon/Small;
+        letter-spacing: 0px;
+        /* margin-bottom: 20px; */
+    }
+
+    .sub-title-brand {
+        color: #818181;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 140%;
+        letter-spacing: 0%;
+        margin-bottom: 20px;
+
+    }
+
+    .brand-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid #D0D0D0;
+        border-radius: 8px;
+        background: #fff;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .brand-image {
+        position: relative;
+        width: 180px;
+        min-width: 170px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .brand-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .brand-overlay {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+
+        color: #FFF;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 43px;
+        leading-trim: NONE;
+        line-height: Icon/Small;
+        letter-spacing: 0px;
+        font-variant: small-caps;
+
+    }
+
+    .brand-content {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .brand-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand-header h2 {
+
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 36px;
+        leading-trim: NONE;
+        line-height: Icon/Small;
+        letter-spacing: 0px;
+        color: #151515;
+        font-variant: small-caps;
+        margin: 0;
+    }
+
+    .brand-desc {
+
+        color: #4A4A4A;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0px;
+
+        max-width: 470px;
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .star {
+        font-size: 20px !important;
+    }
+
+    .filled {
+        color: #D0B606;
+    }
+
+    .rating-value {
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .rating-count {
+
+        font-weight: 600;
+        font-style: Semibold;
+        font-size: 13px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+
+        color: #707070;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .icon-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .icon-btn.heart {
+        color: #ff5a5f;
+        border-color: #ff5a5f;
+    }
+
+    .icon-btn.star-outline {
+        color: #D0B606;
+        border-color: #D0B606;
+    }
+
+    .rate-text {
+        font-size: 18px;
+    }
+
+    .brand-cta {
+        margin-left: auto;
+        /* background-color: red; */
+    }
+
+    .brand-cta button {
+        font-weight: 500;
+        font-style: Medium;
+        cursor: pointer;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        background-color: #2BA9A8;
+        letter-spacing: 0.5px;
+
+        padding: 15px 30px;
+        border-radius: 30px;
+        border: none;
+        color: #FFF;
+
+    }
+
+    @media (max-width: 992px) {
+        .brand-card {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .brand-cta {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .brand-image {
+            width: 100%;
+            height: 200px;
+        }
+
+        .brand-header h2 {
+            font-size: 24px;
+        }
+
+        .brand-desc {
+            font-size: 14px;
+        }
+
+        .brand-cta {
+            width: 100%;
+        }
+
+        .brand-cta button {
+            width: 100%;
+        }
+    }
+
+
+    .empty-wishlist {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 500px;
+
+        img {
+            width: 163px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        h2 {
+
+            font-weight: 500;
+            font-style: Medium;
+            margin-top: 30px;
+            font-size: 18px;
+            leading-trim: NONE;
+            line-height: 140%;
+            letter-spacing: 0%;
+            color: #818181;
+
+
+        }
+    }
+
+}

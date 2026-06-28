@@ -1,0 +1,285 @@
+
+.promo-card {
+  width: 479px;
+  min-width: 479px;
+  height: 605px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+.promo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+
+.promo-card__timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.promo-card__timer-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-sub);
+  letter-spacing: 1px;
+}
+
+
+
+.promo-card__content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 40px 40px;
+}
+
+.promo-card__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.promo-card__title  {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+.promo-card__subtitle{
+    font-size: 54px;
+      font-weight: 700;
+  color: var(--color-white);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+
+
+.promo-card__tagline {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 0;
+  line-height: 1.4;
+  margin-top: 16px;
+  letter-spacing: 2px;
+}
+
+.promo-card__button {
+  width: 100%;
+  max-width: 280px;
+  padding: 16px 40px;
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 62px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 80px auto;
+  -webkit-border-radius: 62px;
+  -moz-border-radius: 62px;
+  -ms-border-radius: 62px;
+  -o-border-radius: 62px;
+}
+
+
+
+.promo-card__button:active {
+  transform: translateY(0);
+}
+
+
+@media (max-width: 1200px) {
+  .promo-card {
+    width: 420px;
+    min-width: 420px;
+    height: 520px;
+  }
+
+  .promo-card__content {
+    padding: 70px 32px 32px;
+  }
+
+  .promo-card__title,
+  .promo-card__subtitle {
+    font-size: 48px;
+  }
+
+  .promo-card__tagline {
+    font-size: 16px;
+  }
+
+  .promo-card__button {
+    max-width: 240px;
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .promo-card {
+    width: 360px;
+    min-width: 360px;
+    height: 450px;
+  }
+
+  .promo-card__timer {
+    top: 16px;
+    right: 16px;
+    padding: 8px 12px;
+  }
+
+  .promo-card__timer-text {
+    font-size: 12px;
+  }
+
+  .promo-card__content {
+    padding: 60px 24px 28px;
+  }
+
+  .promo-card__title,
+  .promo-card__subtitle {
+    font-size: 40px;
+  }
+
+  .promo-card__tagline {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .promo-card__button {
+    max-width: 200px;
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-card {
+    width: 320px;
+    min-width: 320px;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  .promo-card__timer {
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .promo-card__timer-text {
+    font-size: 11px;
+  }
+
+  .promo-card__timer svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .promo-card__content {
+    padding: 50px 20px 24px;
+  }
+
+  .promo-card__title,
+  .promo-card__subtitle {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .promo-card__tagline {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .promo-card__button {
+    max-width: 180px;
+    padding: 10px 24px;
+    font-size: 13px;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card {
+    width: 280px;
+    min-width: 280px;
+    height: 360px;
+    border-radius: 8px;
+  }
+
+  .promo-card__content {
+    padding: 45px 16px 20px;
+  }
+
+  .promo-card__title,
+  .promo-card__subtitle {
+    font-size: 28px;
+  }
+
+  .promo-card__tagline {
+    font-size: 12px;
+  }
+
+  .promo-card__button {
+    max-width: 160px;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  .promo-card {
+    display: none;
+  }
+}
+
+.promo-card--coral {
+  background-color: #E57373;
+}
+
+
+.promo-card--teal {
+  background-color: #4DB6AC;
+}
+
+
+.promo-card--purple {
+  background-color: #9575CD;
+}
+
+
+.promo-card--blue {
+  background-color: #64B5F6;
+}
+
+
+.promo-card--orange {
+  background-color: #FFB74D;
+}
+
+
+.promo-card--dark {
+  background-color: #1a1a2e;
+}

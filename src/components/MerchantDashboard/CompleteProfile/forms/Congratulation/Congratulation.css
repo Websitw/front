@@ -1,0 +1,165 @@
+.congratulation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  min-height: 890px;
+  overflow: hidden;
+  /* min-width: 577px; */
+  width: 100%;
+  padding: 2rem 1rem;
+  .congratulation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+.congratulation-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.congratulation-icon svg {
+  width: 80px;
+  height: 80px;
+  color: var(--color-success, #22c55e);
+}
+
+.congratulation-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-two);
+  margin: 0 0 1rem 0;
+}
+
+.congratulation-subtitle {
+  font-size: 16px;
+  color: var(--border-secondary-color);
+  margin: 0 0 3rem 0;
+  line-height: 1.5;
+}
+
+.btn-dashboard {
+  width: 100%;
+  max-width: 469px;
+  padding: 0.9rem 2rem;
+  margin-top: 3rem;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-white);
+  background-color: var(--color-gray-darkest, #000000);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.btn-dashboard:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-dashboard:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .congratulation-container {
+    min-height: 890px;
+    min-width: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .congratulation-icon svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .congratulation-title {
+    font-size: 22px;
+  }
+
+  .congratulation-subtitle {
+    font-size: 15px;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-dashboard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .congratulation-container {
+    min-height: 890px;
+    min-width: auto;
+    padding: 1rem;
+  }
+
+  .congratulation-icon {
+    margin-bottom: 1.5rem;
+  }
+
+  .congratulation-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .congratulation-title {
+    font-size: 20px;
+    margin-bottom: 0.75rem;
+  }
+
+  .congratulation-subtitle {
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
+
+  .btn-dashboard {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .congratulation-container {
+    min-height: 600px;
+    min-width: auto;
+  }
+
+  .congratulation-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .congratulation-title {
+    font-size: 18px;
+  }
+
+  .congratulation-subtitle {
+    font-size: 13px;
+  }
+
+  .btn-dashboard {
+    padding: 0.75rem 1.25rem;
+    font-size: var(--font-size-xs);
+  }
+}
+
+}
+

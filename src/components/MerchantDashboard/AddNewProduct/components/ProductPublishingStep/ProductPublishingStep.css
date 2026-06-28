@@ -1,0 +1,201 @@
+.pps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* ── Card ── */
+.pps-card {
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+
+.pps-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #151515;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.pps-card-divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary, #0d7c85),
+    transparent
+  );
+  border-radius: 1px;
+}
+
+/* ── Section ── */
+.pps-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pps-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #151515;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.pps-section-divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary, #0d7c85),
+    transparent
+  );
+  border-radius: 1px;
+}
+
+.pps-section-card {
+  gap: 16px;
+}
+
+/* ── Grid ── */
+.pps-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Label hint ── */
+.pps-label-hint {
+  color: #818181;
+  font-weight: 400;
+}
+
+/* ── RTL textarea group ── */
+.pps-textarea-group--rtl .form-label {
+  text-align: right;
+  display: block;
+}
+
+.pps-textarea-group--rtl .form-textarea {
+  direction: rtl;
+  text-align: right;
+}
+
+.pps-textarea-group .form-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ── Input with delete button ── */
+.pps-input-with-delete {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.pps-input-with-delete > .form-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.pps-delete-section-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #bbb;
+  transition: all 0.15s;
+  margin-bottom: 2px;
+}
+
+.pps-delete-section-btn:hover {
+  color: #ef4444;
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+/* ── Template hint ── */
+.pps-template-hint {
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 24px;
+  background: #fff;
+}
+
+.pps-template-hint-text {
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* ── Add section button ── */
+.pps-add-section-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 18px;
+  border: 1.5px dashed #c0c0c0;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #151515;
+  letter-spacing: 0.02em;
+  transition: all 0.15s;
+}
+
+.pps-add-section-btn:hover {
+  border-color: var(--color-primary, #0d7c85);
+  color: var(--color-primary, #0d7c85);
+  background: rgba(13, 124, 133, 0.03);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .pps-row-2col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pps-card {
+    padding: 16px;
+  }
+
+  .pps-textarea-group--rtl .form-label,
+  .pps-textarea-group--rtl .form-textarea {
+    text-align: left;
+    direction: ltr;
+  }
+}
+
+@media (max-width: 576px) {
+  .pps-wrapper {
+    gap: 24px;
+  }
+
+  .pps-card {
+    padding: 14px;
+  }
+
+  .pps-section-title,
+  .pps-card-title {
+    font-size: 15px;
+  }
+}

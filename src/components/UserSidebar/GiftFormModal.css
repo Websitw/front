@@ -1,0 +1,75 @@
+/* GiftFormModal inherits all cart-drawer-gift__* styles from CartDrawer.css */
+/* Below are additions specific to the form-driven modal */
+
+.cart-drawer-gift__error {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 2px;
+  display: block;
+}
+
+.cart-drawer-gift__delivery-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.cart-drawer-gift__toggle-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.cart-drawer-gift__toggle-btn--active {
+  border-color: #0d7c85;
+  background: #e6f4f5;
+  color: #0d7c85;
+  font-weight: 600;
+}
+
+.cart-drawer-gift__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-drawer-gift__cancel {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e53935;
+  border-radius: 8px;
+  background: #fff;
+  color: #e53935;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cart-drawer-gift__cancel:hover {
+  background: #fbe9e7;
+}
+
+.cart-drawer-gift__cancel:disabled,
+.cart-drawer-gift__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cart-drawer-gift__shipping-fee-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.set-location{
+  font-size: 16px;
+  font-weight: 400;
+}
+.set-location-icon{
+  cursor: pointer;
+}

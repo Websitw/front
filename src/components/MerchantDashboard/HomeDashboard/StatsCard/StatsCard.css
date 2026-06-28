@@ -1,0 +1,127 @@
+.stats-card {
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 260px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-lg);
+}
+
+.stats-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stats-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-gray-300);
+  margin: 0;
+}
+
+.stats-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.stats-card-count {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.stats-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+}
+
+.stats-card-change {
+  color: var(--color-success-alt);
+  font-weight: 600;
+}
+
+.stats-card-label {
+  color: var(--color-gray-300);
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .stats-card {
+    min-width: 220px;
+    padding: 20px;
+  }
+
+  .stats-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .stats-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stats-card-count {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-card {
+    min-width: unset;
+    padding: 20px;
+  }
+
+  .stats-card-title {
+    font-size: var(--font-size-base);
+  }
+
+  .stats-card-count {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-card {
+    min-width: unset;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .stats-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stats-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stats-card-count {
+    font-size: var(--font-size-xl);
+  }
+
+  .stats-card-footer {
+    font-size: var(--font-size-xs);
+  }
+}

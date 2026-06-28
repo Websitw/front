@@ -1,0 +1,53 @@
+  .card {
+    background: var(--color-white);
+    border-radius: 8px;
+    padding: 12px;
+    transition: 0.3s ease;
+    position: relative;
+    border: 1px solid var(--color-gray-60);
+    display: flex;
+    flex-direction: column;
+      .card:hover {
+    box-shadow: 0 2px 6px var(--shadow-md);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    object-fit: contain;
+  }
+  
+  .descriptionItem {
+    color: var(--color-gray-400);
+    font-size: 14px;
+    margin-top: 0 !important;
+    text-overflow: ellipsis;
+  
+  }
+  .delete-merchant {
+  margin-top: auto;
+  background: var(--color-white);
+  border: 1px solid var(--color-black) !important; 
+  border-radius: 20px;
+  text-align: center;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--color-error-accent);
+  display: flex;                
+  align-items: center;           
+  justify-content: center;
+  gap: 8px;                     
+  min-width: 120px;    
+  margin-top: 5px;   
+  margin-bottom: 10px;      
+}
+
+.delete-merchant:hover {
+  background: var(--color-error-accent);
+  color: var(--color-white);
+}
+  }
+  

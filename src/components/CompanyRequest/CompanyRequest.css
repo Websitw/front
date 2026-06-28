@@ -1,0 +1,44 @@
+.pending-container {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+}
+
+.pending-content {
+    text-align: center;
+    max-width: 448px;
+    padding: 0 24px;
+}
+
+.pending-icon-wrapper {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.pending-icon-circle {
+    background-color: #fef3c7;
+    border-radius: 50%;
+    padding: 16px;
+    display: inline-flex;
+}
+
+.pending-icon {
+    width: 64px;
+    height: 64px;
+    color: #d97706;
+}
+
+.pending-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.pending-message {
+    color: #4b5563;
+    font-size: 18px;
+    line-height:28px;
+}

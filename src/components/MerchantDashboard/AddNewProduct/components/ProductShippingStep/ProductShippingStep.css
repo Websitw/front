@@ -1,0 +1,243 @@
+.pss-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.pss-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+
+/* ── Section ── */
+.pss-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pss-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #151515;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.pss-section-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary, #0d7c85), transparent);
+  border-radius: 1px;
+}
+
+/* ── Card (bordered box) ── */
+.pss-card {
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+}
+
+.pss-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #151515;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.pss-card-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary, #0d7c85), transparent);
+  border-radius: 1px;
+}
+
+/* ── Grid rows ── */
+.pss-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+/* ── Horizontal divider ── */
+.pss-horizontal-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+.pss-gift-wrap-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary, #0d7c85), transparent);
+  border-radius: 1px;
+}
+
+/* ── Field label ── */
+.pss-field-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-sub, #333);
+}
+
+/* ── Country table ── */
+.pss-added-countries {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pss-countries-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pss-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #c46549;
+  padding: 0;
+}
+
+.pss-delete-btn:hover {
+  opacity: 0.8;
+}
+
+.pss-country-table {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 120px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.pss-country-table__head {
+  display: grid;
+  grid-template-columns: 32px 1fr 80px 120px;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--color-white, #fff);
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+}
+
+.pss-country-table__row {
+  display: grid;
+  grid-template-columns: 32px 1fr 80px 120px;
+  align-items: center;
+  background-color: #f8f9fb;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pss-country-table__row:last-child {
+  border-bottom: none;
+}
+
+.pss-country-table__check {
+  display: flex;
+  align-items: center;
+}
+
+.pss-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--color-primary, #0d7c85);
+}
+
+.pss-country-table__col {
+  font-size: 14px;
+  color: #151515;
+}
+
+.pss-country-table__col--name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-sub, #333);
+}
+
+.pss-country-flag-img {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.pss-country-table__col--status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-sub, #333);
+}
+
+.pss-country-table__col--status .MuiSwitch-root {
+  margin-bottom: 0;
+}
+
+.pss-status-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #818181;
+}
+
+.pss-status-text--active {
+  color: var(--color-primary, #0d7c85);
+}
+
+.pss-country-table__empty {
+  padding: 32px;
+  text-align: center;
+  color: #ccc;
+  font-size: 13px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .pss-row-2col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pss-card {
+    padding: 16px;
+  }
+
+  .pss-country-table__head,
+  .pss-country-table__row {
+    grid-template-columns: 32px 1fr 60px 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pss-section-title {
+    font-size: 15px;
+  }
+
+  .pss-country-table__head,
+  .pss-country-table__row {
+    grid-template-columns: 32px 1fr 80px;
+  }
+
+  .pss-country-table__col--code {
+    display: none;
+  }
+}

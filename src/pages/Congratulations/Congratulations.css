@@ -1,0 +1,54 @@
+.congratulations-container .otp-phone-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 4px 0 40px 0;
+}
+.congratulations-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.congratulations-content .buttons{
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+}
+.congratulations-content .buttons button{
+  width: 100%;
+  padding: 16px 12px;
+  border-radius:20px ;
+  font-size: 16px;
+  -webkit-border-radius:20px ;
+  -moz-border-radius:20px ;
+  -ms-border-radius:20px ;
+  -o-border-radius:20px ;
+
+}
+.complete-details-button{
+  background-color: var(--color-primary-dashboard);
+  color: var(--color-white);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.back-to-login-button{
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--color-primary-dashboard);
+}
+
+.congratulations-desc{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22.4px;
+}
+
+.congratulations-title{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-two);
+}

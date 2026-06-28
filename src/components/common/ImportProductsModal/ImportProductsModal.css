@@ -1,0 +1,447 @@
+.import-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: importModalFadeIn 0.18s ease;
+}
+
+@keyframes importModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.import-modal__card {
+  background: #ffffff;
+  border-radius: 10px;
+  min-width: 746px;
+  min-height: 432px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+  animation: importModalSlideUp 0.22s cubic-bezier(0.34, 1.2, 0.64, 1);
+  overflow: hidden;
+}
+
+@keyframes importModalSlideUp {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.import-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.import-modal__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0px;
+  color: #4a4a4a;
+}
+
+.import-modal__close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.import-modal__close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.import-modal__body {
+  min-height: 130px;
+}
+
+.import-modal__drop-zone {
+  border: 1px dashed #AAAAAA;
+  border-radius: 6px;
+  min-height: 223px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s;
+  gap: 8px;
+  background: #F6F6F6;
+}
+
+.import-modal__drop-zone--dragging {
+  border-color: #0D7C85;
+  background: #eaf6f7;
+}
+
+.import-modal__add-file-btn {
+  background: none;
+  border: 1.5px solid #ced4da;
+  border-radius: 20px;
+  padding: 7px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.15s, background 0.15s;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  color: #151515;
+}
+
+.import-modal__plus-icon {
+  font-size: 18px;
+  line-height: 1;
+  color: #555;
+}
+
+.import-modal__file-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background: #fafbfc;
+}
+
+.import-modal__file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.import-modal__file-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.import-modal__file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #151515;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.import-modal__replace-btn {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid #B4B4B4;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: border-color 0.15s;
+  color: #151515;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.import-modal__options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.import-modal__option-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.import-modal__option-row--stacked {
+  flex-direction: column;
+  gap: 2px;
+}
+
+.import-modal__option-row-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.import-modal__option-checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: #28913F;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.import-modal__option-label {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.5px;
+}
+
+.import-modal__option-hint {
+  color: #818181;
+  padding-left: 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.5px;
+}
+
+.import-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 16px;
+  border-top: 1px solid #e9ecef;
+  margin-top: 30px;
+}
+
+.import-modal__download-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: #0D7C85;
+}
+
+.import-modal__download-link:hover {
+  text-decoration: underline;
+}
+
+.import-modal__footer-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.import-modal__btn-cancel {
+  background: none;
+  border: 1px solid #B4B4B4;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #151515;
+  letter-spacing: 0.5px;
+}
+
+.import-modal__btn-cancel:hover {
+  border-color: #adb5bd;
+}
+
+.import-modal__btn-upload {
+  background: #2d8c84;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.import-modal__btn-upload:hover:not(:disabled) {
+  background: #246f69;
+}
+
+.import-modal__btn-upload--disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.import-modal__hidden-input {
+  display: none;
+}
+
+
+.import-modal__validation-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #15803d;
+  line-height: 1.5;
+}
+
+.import-modal__validation-stat {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #16a34a;
+}
+
+.import-modal__validation-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #991b1b;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.import-modal__validation-error-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.import-modal__validation-error-title {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+.import-modal__validation-section {
+  margin-bottom: 12px;
+}
+
+.import-modal__validation-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.import-modal__validation-section-title {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.import-modal__validation-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background-color: #fefce8;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #854d0e;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.import-modal__missing-headers {
+  margin: 4px 0 0 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.import-modal__missing-headers li {
+  margin-bottom: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.import-modal__header-code {
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.import-modal__header-desc {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.import-modal__validation-fix-hint {
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  background-color: rgba(220, 38, 38, 0.06);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #b91c1c;
+}
+
+.import-modal__btn-import {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background-color: #0D7C85;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.import-modal__btn-import:hover {
+  background-color: #0a656d;
+}
+
+.import-modal__btn-upload {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.import-modal__spinner {
+  animation: spin 1s linear infinite;
+}

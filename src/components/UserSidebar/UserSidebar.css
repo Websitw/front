@@ -1,0 +1,24 @@
+:root {
+  --sidebar-width: 80px;
+  --modal-width: 450px;
+  --sidebar-panel-closed-translate: -100%;
+  --sidebar-stacked-panel-closed-translate: -100%;
+  --sidebar-gift-panel-closed-translate: -120%;
+}
+
+body[dir="rtl"] {
+  --sidebar-panel-closed-translate: 100%;
+  --sidebar-stacked-panel-closed-translate: 100%;
+  --sidebar-gift-panel-closed-translate: 120%;
+}
+
+.user-sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: transparent;
+}
+
+body[dir="rtl"] .account-modal-comp__menu-arrow {
+  transform: scaleX(-1);
+}

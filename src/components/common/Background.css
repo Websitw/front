@@ -1,0 +1,77 @@
+.background-content {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.background-content .login-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-content .bg-content {
+  position: absolute;
+  bottom: 200px;
+  left: 160px;
+  z-index: 3;
+  max-width: 694px;
+  color: #ffffff;
+  pointer-events: auto;
+}
+
+.background-content .bg-content h1 {
+  font-weight: 700;
+  margin-bottom: 0;
+  max-width: 605px;
+  width: 100%;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+.background-content .bg-content p {
+  max-width: 605px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 26px;
+  margin-top: 15px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+.background-content .dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.background-content .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.background-content .dot.active {
+  background-color: #d17c63;
+}
+
+@media (max-width: 1024px) {
+  .background-content {
+    display: none;
+  }
+}
+

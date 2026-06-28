@@ -1,0 +1,68 @@
+.si-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.si-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-sub);
+  letter-spacing: 0.02em;
+}
+
+.si-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary, #0d7c85), transparent);
+  border-radius: 1px;
+}
+
+.si-input-container {
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 14px 16px;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.si-input-container:focus-within {
+  border-color: var(--color-primary, #0d7c85);
+}
+
+.si-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #151515;
+  font-family: inherit;
+  background: transparent;
+}
+
+.si-input::placeholder {
+  color: #aaa;
+}
+
+.si-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.si-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  background-color: var(--color-primary, #0d7c85);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.si-error {
+  font-size: 12px;
+  color: #ef4444;
+}

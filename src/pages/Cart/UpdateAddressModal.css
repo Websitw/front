@@ -1,0 +1,222 @@
+.update-address-modal {
+  background-color: #ffffff;
+  border-radius: 16px;
+  max-width: 935px;
+  width: 100%;
+  max-height: 852px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.update-address-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 530px;
+  right: 0;
+  bottom: 0;
+  background-color: #0d7c8580;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.update-address-modal__container {
+  width: 935px;
+  height: 802px;
+  border-radius: 18px;
+  padding: 28px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.update-address-modal__header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.update-address-modal__title {
+  color: #000;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 0px;
+}
+
+.update-address-modal__close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.update-address-modal__back-btn {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #00619b;
+}
+
+.update-address-modal__body {
+  display: flex;
+  gap: 40px;
+}
+
+.update-address-modal__body-left {
+  flex: 1.3;
+}
+
+.update-address-modal__body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.update-address-modal__section-title {
+  color: #121212;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+  margin: 10px 0;
+}
+
+.update-address-modal__submit-btn {
+  background-color: #0d7c85;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.update-address-modal__form {
+  max-width: 920px;
+}
+
+.update-address-modal__form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.update-address-modal__form-group label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 8px;
+  color: #151515;
+}
+
+.update-address-modal__input {
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #b4b4b4;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+.update-address-modal__input--narrow {
+  width: 40%;
+  min-width: 420px;
+}
+
+.update-address-modal__error {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #d83020;
+}
+
+.update-address-modal__divider {
+  border: none;
+  border-top: 1px solid #b4b4b4;
+  margin: 20px 0;
+}
+
+.update-address-modal__row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.update-address-modal__row .update-address-modal__form-group {
+  flex: 1;
+}
+
+.update-address-modal__row .update-address-modal__input {
+  width: 100%;
+}
+
+.update-address-modal__select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.update-address-modal__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.update-address-modal__select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6f6f6f;
+  font-size: 22px !important;
+}
+
+.update-address-modal__phone-wrapper {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border: 1px solid #b4b4b4;
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+  width: 40%;
+  min-width: 420px;
+}
+
+.update-address-modal__country-code {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  border-right: 1px solid #d9d9d9;
+  font-size: 14px;
+  color: #333;
+}
+
+.update-address-modal__flag img {
+  width: 25px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.update-address-modal__phone-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 15px;
+  background: transparent;
+}

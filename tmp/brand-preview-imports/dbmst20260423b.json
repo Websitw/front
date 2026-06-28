@@ -1,0 +1,16 @@
+{
+  "inputPath": "/Users/hamzehal-gogazeh/futericDevOps/e-commerce/docs/Sensation_Marketplace_Final_Attributes_Scored.xlsx",
+  "outputPath": "/Users/hamzehal-gogazeh/futericDevOps/e-commerce/tmp/brand-preview-imports/dbmst20260423b.xlsx",
+  "targetBrandKey": "dbmst20260423b",
+  "headerRow": 1,
+  "productsWritten": 12,
+  "rowsWritten": 12,
+  "keptSourceIdentifiers": false,
+  "sampleProductKeys": [
+    "Sensation-Dead-Sea-Loofah-Soap-Round-Soft-Lavender",
+    "Sensation-Dead-Sea-Loofah-Soap-Round-English-Rose",
+    "Sensation-Dead-Sea-Loofah-Soap-Round-Herbal-Citrus",
+    "Sensation-Dead-Sea-Exfoliating-Soap",
+    "Sensation-Dead-Sea-Mineral-Soap"
+  ]
+}

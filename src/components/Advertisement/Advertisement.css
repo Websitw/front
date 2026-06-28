@@ -1,0 +1,120 @@
+.ad-banner {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  .ad-banner__image-container {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .ad-banner__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .ad-banner__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    gap: 20px;
+  }
+  
+  .ad-banner__text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .ad-banner__discount-value {
+    font-size: clamp(40px, 10vw, 90px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  
+  .ad-banner__discount-label {
+    font-size: clamp(18px, 4vw, 32px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+  
+}
+
+
+.ad-banner__subtitle {
+  font-size: clamp(12px, 2.5vw, 16px);
+  color: #fff;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .ad-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ad-banner__image-container {
+    width: 100%;
+    flex: unset;
+    padding: 0;
+  }
+
+  .ad-banner__image {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+  .ad-banner__content {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .ad-banner__text-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ad-banner__discount-value {
+    font-size: 48px;
+  }
+
+  .ad-banner__discount-label {
+    font-size: 20px;
+    white-space: normal; 
+  }
+
+  .ad-banner__subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-banner__discount-value {
+    font-size: 36px;
+  }
+
+  .ad-banner__discount-label {
+    font-size: 18px;
+  }
+
+  .ad-banner__subtitle {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,334 @@
+.account-modal-comp {
+  position: fixed;
+  top: 0;
+  inset-inline-start: var(--sidebar-width, 80px);
+  width: var(--modal-width, 450px);
+  height: 100vh;
+  background: #ffffff;
+  transform: translateX(var(--sidebar-panel-closed-translate, -100%));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border-inline-end: 1px solid #b4b4b4;
+}
+
+.account-modal-comp--open {
+  transform: translateX(0);
+}
+
+.account-modal-comp__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-modal-comp__logo {
+  margin-top: 20px;
+}
+
+.account-modal-comp__close-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  color: #111827;
+  margin-top: 25px;
+}
+
+/* Profile Section */
+.account-modal-comp__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  margin-bottom: 16px;
+}
+
+.account-modal-comp__avatar {
+  width: 48px;
+  height: 48px;
+  background: #d7dbf3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.account-modal-comp__user-info {
+  flex: 1;
+}
+
+.account-modal-comp__user-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2ba9a8;
+}
+
+.account-modal-comp__user-email {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #4a4a4a;
+}
+
+.account-modal-comp__notification {
+  margin-inline-end: 10px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.account-modal-comp__notification-badge {
+  position: absolute;
+  top: -3px;
+  inset-inline-end: -3px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+/* Menu Items */
+.account-modal-comp__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.account-modal-comp__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #b4b4b4;
+  transition: background 0.2s;
+}
+
+.account-modal-comp__menu-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.account-modal-comp__menu-icon {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.account-modal-comp__menu-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.account-modal-comp__menu-title:hover {
+  color: var(--color-primary);
+}
+
+.account-modal-comp__menu-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #4a4a4a;
+}
+
+
+/* ================================================================
+   BUSINESS SECTION
+   ================================================================ */
+
+.account-modal-comp__business-title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #4a4a4a;
+}
+
+.account-modal-comp__business-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: #151515;
+  margin-top: 10px;
+}
+
+.account-modal-comp__business-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #00619b;
+}
+
+.account-modal-comp__business-link:hover {
+  color: #004d7a;
+}
+
+.account-modal-comp__business-cta {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.account-modal-comp__message-company {
+  color: #e53935;
+  font-size: 12px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+/* Business Status Badge */
+.account-modal-comp__biz-status {
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.account-modal-comp__biz-status--active {
+  color: #28913f;
+}
+
+.account-modal-comp__biz-status--pending {
+  color: #d83020;
+}
+
+.account-modal-comp__biz-status--suspended {
+  color: #d0b606;
+}
+
+/* Status Info Tooltip */
+.account-modal-comp__status-info {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-inline-start: 4px;
+}
+
+.account-modal-comp__status-info-icon {
+  font-size: 16px !important;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.account-modal-comp__status-info-icon:hover {
+  color: #4b5563;
+}
+
+.account-modal-comp__status-tooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: #2b2b2b;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  min-width: 280px;
+  max-width: 320px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.account-modal-comp__status-info:hover .account-modal-comp__status-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.account-modal-comp__status-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom-color: #2b2b2b;
+}
+
+.account-modal-comp__status-tooltip p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.account-modal-comp__status-tooltip span {
+  color: #6bc7ff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.account-modal-comp__status-tooltip span:hover {
+  color: #93c5fd;
+}
+
+
+/* ================================================================
+   BOTTOM
+   ================================================================ */
+
+.account-modal-comp__bottom {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.account-modal-comp__logout-btn {
+  margin-top: auto;
+  width: 100%;
+  background: transparent;
+  color: #151515;
+  border: 1px solid #b4b4b4;
+  padding: 12px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  font-size: 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.account-modal-comp__logout-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .account-modal-comp {
+    inset-inline-start: 0 !important;
+    width: 100% !important;
+    top: 50px !important;
+  }
+}

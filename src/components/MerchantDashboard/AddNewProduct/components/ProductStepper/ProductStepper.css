@@ -1,0 +1,125 @@
+.product-stepper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+}
+
+.stepper-item {
+  position: relative;
+  max-width: 314px;
+}
+
+.stepper-item__line {
+  height: 2px;
+  background-color: #dfdfdf;
+  width: 100%;
+}
+
+.stepper-item--active .stepper-item__line,
+.stepper-item--completed .stepper-item__line {
+  background-color: #007ac2;
+}
+
+.stepper-item__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 16px 20px 0;
+}
+
+.stepper-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.stepper-item--active .stepper-item__icon,
+.stepper-item--completed .stepper-item__icon {
+  color: #007ac2;
+}
+
+.stepper-item__icon .stepper-item__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  background-color: transparent;
+}
+
+.stepper-item--active .stepper-item__dot {
+  border-color: #007ac2;
+  background-color: #007ac2;
+}
+
+.stepper-item--completed .stepper-item__dot {
+  border-color: #007ac2;
+  background-color: #007ac2;
+}
+
+.stepper-item__number {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #4a4a4a;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.stepper-item--active .stepper-item__number {
+  color: #007ac2;
+}
+
+.stepper-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.stepper-item__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #151515;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stepper-item--active .stepper-item__title {
+  color: #151515;
+}
+
+.stepper-item__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #4A4A4A;
+}
+
+.stepper-item--active .stepper-item__subtitle {
+  color: #4a4a4a;
+}
+
+@media (max-width: 992px) {
+  .product-stepper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-stepper {
+    grid-template-columns: 1fr;
+  }
+
+  .stepper-item__content {
+    padding: 12px 0;
+  }
+
+  .stepper-item__subtitle {
+    display: none;
+  }
+}

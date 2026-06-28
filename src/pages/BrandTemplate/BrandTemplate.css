@@ -1,0 +1,2499 @@
+.brand-market {
+  --brand-surface: #0f172a;
+  --brand-text: #f8fafc;
+  --brand-border: rgba(148, 163, 184, 0.18);
+  --brand-muted: #cbd5e1;
+  --brand-ink: #f8fafc;
+  --brand-ink-soft: rgba(226, 232, 240, 0.8);
+  --brand-ink-muted: rgba(203, 213, 225, 0.68);
+  --brand-accent: #0ea5a8;
+  --brand-heading-font: "Sora", "Montserrat", sans-serif;
+  --brand-body-font: "Manrope", "Segoe UI", sans-serif;
+  --brand-display-size: clamp(38px, 6vw, 74px);
+  --brand-title-size: clamp(26px, 3.4vw, 40px);
+  --brand-section-gap: 40px;
+  --brand-layout-padding: 32px;
+  --brand-button-radius: 8px;
+  --brand-accent-strong: #0f4043;
+  --brand-radius-md: 18px;
+  --brand-radius-lg: 24px;
+  --brand-shell-max-width: 1480px;
+  --brand-shell-border: rgba(255, 255, 255, 0.54);
+  --brand-page-fill:
+    radial-gradient(circle at 14% 14%, rgba(14, 165, 168, 0.16) 0%, transparent 26%),
+    radial-gradient(circle at 82% 88%, rgba(21, 94, 117, 0.18) 0%, transparent 24%),
+    linear-gradient(180deg, #08111b 0%, #0b1624 42%, #0f1d2d 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--brand-accent) 12%, transparent), transparent 34%),
+    linear-gradient(180deg, rgba(11, 21, 34, 0.94), rgba(13, 25, 40, 0.96));
+  --brand-card-fill:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--brand-accent) 10%, transparent), transparent 32%),
+    linear-gradient(180deg, rgba(14, 25, 39, 0.96), rgba(17, 30, 46, 0.98));
+  --brand-card-shadow: 0 28px 60px rgba(2, 6, 18, 0.34);
+  --brand-hero-fill: linear-gradient(135deg, #0f172a 0%, #101827 42%, #132f38 100%);
+  --brand-hero-glow: rgba(14, 165, 168, 0.24);
+  --brand-subtle-surface: rgba(15, 23, 42, 0.82);
+  --brand-soft-shadow: 0 18px 42px rgba(2, 6, 18, 0.28);
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--brand-page-fill);
+  color: var(--brand-text);
+  font-family: var(--brand-body-font);
+}
+
+html.brand-market-route,
+body.brand-market-route,
+body.brand-market-route #root,
+body.brand-market-route button,
+body.brand-market-route input,
+body.brand-market-route textarea,
+body.brand-market-route select {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+body.brand-market-route {
+  color: #f8fafc;
+}
+
+body.brand-market-route .sidebar-nav__brand-trigger {
+  background-color: #2ba9a8;
+  border-radius: 8px;
+}
+
+body.brand-market-route .sidebar-nav__locale-chip img,
+body.brand-market-route .sidebar-nav__flag img {
+  border-radius: 8px;
+}
+
+body.brand-market-route .sidebar-nav__lang-trigger,
+body.brand-market-route .sidebar-nav__lang-item {
+  font-family: inherit;
+}
+
+body.brand-market-route .sidebar-nav__lang-trigger,
+body.brand-market-route .sidebar-nav__lang-trigger-icon,
+body.brand-market-route .sidebar-nav__lang-menu-label,
+body.brand-market-route .sidebar-nav__lang-item,
+body.brand-market-route .sidebar-nav__lang-item-name,
+body.brand-market-route .sidebar-nav__lang-item-badge,
+body.brand-market-route .sidebar-nav__country {
+  color: rgba(248, 250, 252, 0.8);
+}
+
+body.brand-market-route .sidebar-nav__lang-item,
+body.brand-market-route .sidebar-nav__lang-item-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.brand-market-route .sidebar-nav__lang-trigger:hover,
+body.brand-market-route .sidebar-nav__lang-dropdown--open .sidebar-nav__lang-trigger,
+body.brand-market-route .sidebar-nav__lang-item:hover,
+body.brand-market-route .sidebar-nav__lang-item.active {
+  background: rgba(43, 169, 168, 0.22);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.brand-market-route .sidebar-nav__lang-item.active .sidebar-nav__lang-item-badge {
+  background: #2ba9a8;
+  border-color: #2ba9a8;
+  color: #ffffff;
+}
+
+.brand-market,
+.brand-market * {
+  box-sizing: border-box;
+}
+
+.brand-market * {
+  font-family: inherit;
+}
+
+.brand-market button {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.brand-market a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-market__utilities .back-to-top {
+  width: 56px;
+  max-height: none;
+  padding: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.22);
+}
+
+.brand-market__utilities .back-to-top:hover {
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+}
+
+.brand-market__utilities .back-to-top__icon,
+.brand-market__utilities .back-to-top__text {
+  color: currentColor;
+}
+
+.brand-market__utilities .back-to-top__text {
+  display: none;
+}
+
+.brand-market::before,
+.brand-market::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: auto;
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.brand-market::before {
+  top: 64px;
+  inset-inline-start: -120px;
+  width: 360px;
+  height: 360px;
+  background: color-mix(in srgb, var(--brand-accent) 18%, transparent);
+}
+
+.brand-market::after {
+  bottom: 220px;
+  inset-inline-end: -100px;
+  width: 320px;
+  height: 320px;
+  background: color-mix(in srgb, var(--brand-accent) 14%, rgba(15, 23, 42, 0.22));
+}
+
+.brand-market--editorial-hero {
+  --brand-accent: #149eaa;
+  --brand-page-fill:
+    radial-gradient(circle at 12% 12%, rgba(20, 158, 170, 0.16) 0%, transparent 24%),
+    radial-gradient(circle at 84% 84%, rgba(15, 111, 122, 0.18) 0%, transparent 22%),
+    linear-gradient(180deg, #08121a 0%, #0d1822 42%, #102330 100%);
+  --brand-hero-fill: linear-gradient(135deg, #101827 0%, #0f1f24 52%, #11515b 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(20, 158, 170, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(10, 22, 30, 0.95), rgba(12, 27, 36, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(20, 158, 170, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(13, 28, 37, 0.96), rgba(15, 31, 41, 0.98));
+}
+
+.brand-market--commerce-grid {
+  --brand-accent: #127da9;
+  --brand-page-fill:
+    radial-gradient(circle at 14% 14%, rgba(18, 125, 169, 0.16) 0%, transparent 24%),
+    radial-gradient(circle at 84% 86%, rgba(17, 72, 98, 0.2) 0%, transparent 24%),
+    linear-gradient(180deg, #08121d 0%, #0d1825 38%, #102131 100%);
+  --brand-hero-fill: linear-gradient(135deg, #111827 0%, #102235 52%, #145c6b 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(18, 125, 169, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(11, 20, 32, 0.95), rgba(13, 24, 38, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(18, 125, 169, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(14, 25, 39, 0.96), rgba(16, 30, 46, 0.98));
+}
+
+.brand-market--story-collection {
+  --brand-accent: #8d5cf6;
+  --brand-page-fill:
+    radial-gradient(circle at 14% 12%, rgba(141, 92, 246, 0.14) 0%, transparent 26%),
+    radial-gradient(circle at 84% 84%, rgba(73, 76, 176, 0.16) 0%, transparent 22%),
+    linear-gradient(180deg, #0d1020 0%, #12162a 40%, #171d35 100%);
+  --brand-hero-fill: linear-gradient(135deg, #171128 0%, #23173d 52%, #315f78 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(141, 92, 246, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(18, 17, 36, 0.95), rgba(24, 22, 46, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(141, 92, 246, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(23, 20, 42, 0.96), rgba(28, 24, 50, 0.98));
+}
+
+.brand-market--campaign-focus {
+  --brand-accent: #da7c2e;
+  --brand-page-fill:
+    radial-gradient(circle at 14% 14%, rgba(218, 124, 46, 0.14) 0%, transparent 24%),
+    radial-gradient(circle at 84% 84%, rgba(122, 45, 52, 0.18) 0%, transparent 22%),
+    linear-gradient(180deg, #150f14 0%, #1d1219 38%, #291720 100%);
+  --brand-hero-fill: linear-gradient(135deg, #21151c 0%, #3b1c27 44%, #7d4a23 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(218, 124, 46, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(28, 17, 23, 0.95), rgba(36, 20, 27, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(218, 124, 46, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(34, 21, 27, 0.96), rgba(43, 24, 32, 0.98));
+}
+
+.brand-market--routine-solution {
+  --brand-accent: #1c9f8d;
+  --brand-page-fill:
+    radial-gradient(circle at 14% 14%, rgba(28, 159, 141, 0.15) 0%, transparent 24%),
+    radial-gradient(circle at 84% 84%, rgba(17, 86, 79, 0.18) 0%, transparent 22%),
+    linear-gradient(180deg, #091319 0%, #0d1b23 40%, #11252d 100%);
+  --brand-hero-fill: linear-gradient(135deg, #0f172a 0%, #142239 46%, #16605d 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(28, 159, 141, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(12, 23, 29, 0.95), rgba(14, 29, 35, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(28, 159, 141, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(14, 28, 35, 0.96), rgba(16, 32, 39, 0.98));
+}
+
+.brand-market--deal-promo {
+  --brand-accent: #d58d34;
+  --brand-page-fill:
+    radial-gradient(circle at 14% 14%, rgba(213, 141, 52, 0.14) 0%, transparent 24%),
+    radial-gradient(circle at 84% 84%, rgba(110, 63, 34, 0.18) 0%, transparent 22%),
+    linear-gradient(180deg, #141014 0%, #1b141a 38%, #261b23 100%);
+  --brand-hero-fill: linear-gradient(135deg, #211920 0%, #3a2432 44%, #7f5524 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(213, 141, 52, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(27, 19, 25, 0.95), rgba(34, 24, 31, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(213, 141, 52, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(31, 22, 29, 0.96), rgba(39, 27, 35, 0.98));
+}
+
+.brand-market--category-hub {
+  --brand-accent: #1f8cab;
+  --brand-page-fill:
+    radial-gradient(circle at 14% 14%, rgba(31, 140, 171, 0.15) 0%, transparent 24%),
+    radial-gradient(circle at 84% 84%, rgba(17, 64, 88, 0.18) 0%, transparent 22%),
+    linear-gradient(180deg, #08131a 0%, #0c1b24 40%, #102633 100%);
+  --brand-hero-fill: linear-gradient(135deg, #101827 0%, #11243b 48%, #145262 100%);
+  --brand-shell-fill:
+    radial-gradient(circle at top right, rgba(31, 140, 171, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(10, 22, 29, 0.95), rgba(13, 27, 36, 0.97));
+  --brand-card-fill:
+    radial-gradient(circle at top left, rgba(31, 140, 171, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(13, 27, 35, 0.96), rgba(16, 31, 40, 0.98));
+}
+
+.brand-market h1,
+.brand-market h2,
+.brand-market h3,
+.brand-market h4 {
+  font-family: var(--brand-heading-font);
+}
+
+.brand-market--mode-light {
+  color: #111827;
+}
+
+.brand-market--mode-light .brand-market__module,
+.brand-market--mode-light .brand-market__footer,
+.brand-market--mode-light .brand-market__hero-system-shell,
+.brand-market--mode-light .brand-market__hero-offer-card,
+.brand-market--mode-light .brand-market__hero-routine-step,
+.brand-market--mode-light .brand-market__hero-deal-card,
+.brand-market--mode-light .brand-market__hero-hub-card,
+.brand-market--mode-light .brand-market__hero-story-card {
+  color: #111827;
+}
+
+.brand-market--surface-tone-light {
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--brand-accent) 12%, transparent), transparent 34%),
+    linear-gradient(180deg, #f8f4ee 0%, #f6f1ea 100%);
+  color: #111827;
+}
+
+.brand-market--surface-tone-balanced {
+  background: linear-gradient(180deg, #f5efe7 0%, #efe7dc 100%);
+}
+
+.brand-market--surface-tone-dark {
+  background: var(--brand-page-fill);
+  color: var(--brand-text);
+}
+
+.brand-market--mode-dark.brand-market--surface-tone-light,
+.brand-market--mode-dark.brand-market--surface-tone-balanced,
+.brand-market--mode-dark.brand-market--surface-tone-dark {
+  background: var(--brand-page-fill);
+  color: var(--brand-text);
+}
+
+.brand-market--buttons-pill .brand-market__action,
+.brand-market--buttons-pill .brand-market__chip,
+.brand-market--buttons-pill .brand-market__collection-nav-item,
+.brand-market--buttons-pill .brand-market__quick-jump-item,
+.brand-market--buttons-pill .brand-market__hero-hub-card {
+  border-radius: 999px;
+}
+
+.brand-market--buttons-sharp .brand-market__action,
+.brand-market--buttons-sharp .brand-market__chip,
+.brand-market--buttons-sharp .brand-market__collection-nav-item,
+.brand-market--buttons-sharp .brand-market__quick-jump-item,
+.brand-market--buttons-sharp .brand-market__hero-hub-card {
+  border-radius: 0px;
+}
+
+.brand-market--overlay-soft .brand-market__hero-media-frame::after,
+.brand-market--overlay-soft .brand-market__hero-side::after,
+.brand-market--overlay-soft .brand-market__hero-story-rail::after,
+.brand-market--overlay-soft .brand-market__hero-campaign-side::after,
+.brand-market--overlay-soft .brand-market__hero-routine-side::after,
+.brand-market--overlay-soft .brand-market__hero-deal-side::after,
+.brand-market--overlay-soft .brand-market__hero-hub-side::after {
+  background: linear-gradient(180deg, rgba(15, 19, 21, 0.18), rgba(15, 19, 21, 0.52));
+}
+
+.brand-market--overlay-solid .brand-market__hero-media-frame::after,
+.brand-market--overlay-solid .brand-market__hero-side::after,
+.brand-market--overlay-solid .brand-market__hero-story-rail::after,
+.brand-market--overlay-solid .brand-market__hero-campaign-side::after,
+.brand-market--overlay-solid .brand-market__hero-routine-side::after,
+.brand-market--overlay-solid .brand-market__hero-deal-side::after,
+.brand-market--overlay-solid .brand-market__hero-hub-side::after {
+  background: linear-gradient(180deg, rgba(15, 19, 21, 0.4), rgba(15, 19, 21, 0.88));
+}
+
+.brand-market--cards-soft .brand-market__module,
+.brand-market--cards-soft .brand-market__footer,
+.brand-market--cards-soft .brand-market__hero-system-shell {
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+  background: var(--brand-shell-fill);
+}
+
+.brand-market--cards-bold .brand-market__module,
+.brand-market--cards-bold .brand-market__footer,
+.brand-market--cards-bold .brand-market__hero-system-shell {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.34);
+}
+
+.brand-market__state {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px;
+  text-align: center;
+}
+
+.brand-market__state p {
+  max-width: 520px;
+  margin: 0;
+  color: color-mix(in srgb, var(--brand-text) 72%, transparent);
+}
+
+.brand-market__masthead {
+  width: min(100%, var(--brand-shell-max-width));
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 16px 24px 8px;
+  background: linear-gradient(180deg, rgba(8, 17, 27, 0.92), rgba(8, 17, 27, 0));
+  backdrop-filter: blur(12px);
+}
+
+.brand-market__masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border: 1px solid color-mix(in srgb, var(--brand-border) 76%, rgba(255, 255, 255, 0.64));
+  border-radius: var(--brand-radius-lg);
+  background: var(--brand-shell-fill);
+  box-shadow: var(--brand-soft-shadow);
+  backdrop-filter: blur(16px);
+}
+
+.brand-market__masthead-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.brand-market__masthead-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.2);
+}
+
+.brand-market__masthead-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.brand-market__masthead-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--brand-text) 70%, var(--brand-accent) 30%);
+}
+
+.brand-market__masthead-copy strong {
+  font-family: var(--brand-heading-font);
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.05;
+  color: var(--brand-ink);
+}
+
+.brand-market__masthead-copy span:last-child {
+  color: var(--brand-ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.brand-market__masthead-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.brand-market__masthead-link {
+  min-height: 40px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.brand-market__hero-system {
+  width: min(100%, calc(var(--brand-shell-max-width) + 56px));
+  margin: 0 auto;
+  padding: 22px 24px 12px;
+}
+
+.brand-market__hero-system-shell {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: var(--brand-radius-lg);
+  background: var(--brand-hero-fill);
+  box-shadow: 0 28px 72px rgba(15, 23, 42, 0.14);
+}
+
+.brand-market__hero-system-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--brand-accent) 20%, transparent), transparent 28%),
+    radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.08), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.brand-market__hero-system-shell--editorial,
+.brand-market__hero-system-shell--story,
+.brand-market__hero-system-shell--campaign,
+.brand-market__hero-system-shell--routine,
+.brand-market__hero-system-shell--deal,
+.brand-market__hero-system-shell--hub {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 48%);
+  gap: 28px;
+  padding: var(--brand-layout-padding);
+  min-height: min(68vh, 860px);
+}
+
+.brand-market__hero-system-shell--commerce {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+  gap: 28px;
+  padding: var(--brand-layout-padding);
+  min-height: min(66vh, 820px);
+}
+
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-copy {
+  order: 2;
+}
+
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-media-frame,
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-side,
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-story-rail,
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-campaign-side,
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-routine-side,
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-deal-side,
+.brand-market__hero-system-shell[data-hero-experiment="media-first"] .brand-market__hero-hub-side {
+  order: 1;
+}
+
+.brand-market__hero-system-shell[data-hero-experiment="balanced"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.brand-market__hero-system-shell[data-hero-experiment="copy-first"] .brand-market__hero-copy {
+  max-width: 720px;
+}
+
+.brand-market__hero-system-shell[data-hero-layout="campaign"] .brand-market__hero-copy,
+.brand-market__hero-system-shell[data-hero-layout="deal"] .brand-market__hero-copy {
+  justify-content: flex-end;
+}
+
+.brand-market__hero-system-shell[data-hero-layout="commerce"] .brand-market__hero-copy,
+.brand-market__hero-system-shell[data-hero-layout="hub"] .brand-market__hero-copy {
+  justify-content: flex-start;
+}
+
+.brand-market__hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+  max-width: 760px;
+  color: #f8fafc;
+  padding-inline-end: 8px;
+}
+
+.brand-market__hero-eyebrow,
+.brand-market__section-eyebrow,
+.brand-market__benefit-eyebrow,
+.brand-market__policy-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+}
+
+.brand-market__hero-copy h1 {
+  margin: 0;
+  font-size: var(--brand-display-size);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-shadow: 0 14px 44px rgba(0, 0, 0, 0.32);
+}
+
+.brand-market__hero-copy p {
+  margin: 0;
+  max-width: 680px;
+  font-size: clamp(16px, 1.15vw, 19px);
+  line-height: 1.68;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__hero-brandline {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: rgba(248, 250, 252, 0.8);
+  max-width: 100%;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
+}
+
+.brand-market__hero-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: var(--brand-radius-md);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.22);
+}
+
+.brand-market__hero-actions,
+.brand-market__service-links,
+.brand-market__chip-row,
+.brand-market__footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-market__action,
+.brand-market__chip,
+.brand-market__collection-nav-item,
+.brand-market__quick-jump-item,
+.brand-market__hero-story-card,
+.brand-market__hero-offer-card,
+.brand-market__hero-hub-card,
+.brand-market__footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--brand-button-radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  font: inherit;
+  appearance: none;
+}
+
+.brand-market__action:hover,
+.brand-market__chip:hover,
+.brand-market__collection-nav-item:hover,
+.brand-market__quick-jump-item:hover,
+.brand-market__hero-story-card:hover,
+.brand-market__hero-offer-card:hover,
+.brand-market__hero-hub-card:hover,
+.brand-market__footer-link:hover {
+  transform: translateY(-2px);
+}
+
+.brand-market__action {
+  min-height: 46px;
+  padding: 0 24px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-market__action--primary,
+.brand-market__action--pill {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-accent) 92%, white 8%), color-mix(in srgb, var(--brand-accent) 70%, #042f2e 30%));
+  color: #f8fafc;
+  box-shadow: 0 16px 34px color-mix(in srgb, var(--brand-accent) 28%, transparent);
+}
+
+.brand-market__action--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  backdrop-filter: blur(18px);
+}
+
+.brand-market__action--ghost,
+.brand-market__footer-link {
+  background: transparent;
+  color: var(--brand-accent);
+  border-color: transparent;
+  padding: 0;
+}
+
+.brand-market__action--text {
+  min-height: 38px;
+  padding: 0 14px;
+  background: var(--brand-accent-strong);
+  color: #ffffff;
+  border-color: var(--brand-accent-strong);
+  box-shadow: none;
+}
+
+.brand-market__action--pill,
+.brand-market__action--ghost {
+  min-height: 40px;
+  padding: 0 16px;
+}
+
+.brand-market__hero-media-frame,
+.brand-market__hero-side,
+.brand-market__hero-story-rail,
+.brand-market__hero-campaign-side,
+.brand-market__hero-routine-side,
+.brand-market__hero-deal-side,
+.brand-market__hero-hub-side {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  border-radius: var(--brand-radius-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  box-shadow: none;
+}
+
+.brand-market__hero-media-frame::after,
+.brand-market__hero-side::after,
+.brand-market__hero-story-rail::after,
+.brand-market__hero-campaign-side::after,
+.brand-market__hero-routine-side::after,
+.brand-market__hero-deal-side::after,
+.brand-market__hero-hub-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 18, 32, 0.04), rgba(9, 13, 22, 0.46));
+}
+
+.brand-market__hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-market__hero-media--fallback {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-accent) 28%, #121212) 0%, #050505 100%);
+}
+
+.brand-market__hero-side,
+.brand-market__hero-campaign-side,
+.brand-market__hero-routine-side,
+.brand-market__hero-deal-side,
+.brand-market__hero-hub-side {
+  display: grid;
+}
+
+.brand-market__hero-side > *,
+.brand-market__hero-story-rail > *,
+.brand-market__hero-campaign-side > *,
+.brand-market__hero-routine-side > *,
+.brand-market__hero-deal-side > *,
+.brand-market__hero-hub-side > * {
+  z-index: 1;
+}
+
+.brand-market__hero-story-rail {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 16px;
+}
+
+.brand-market__hero-story-cards,
+.brand-market__hero-routine-steps,
+.brand-market__hero-deal-stack,
+.brand-market__hero-hub-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.brand-market__hero-story-cards,
+.brand-market__hero-deal-stack,
+.brand-market__hero-hub-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.brand-market__hero-routine-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.brand-market__hero-story-card,
+.brand-market__hero-offer-card,
+.brand-market__hero-routine-step,
+.brand-market__hero-deal-card,
+.brand-market__hero-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  text-align: left;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--brand-radius-md);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.brand-market__hero-offer-card span,
+.brand-market__hero-deal-card span,
+.brand-market__hero-routine-step span {
+  color: var(--brand-accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.brand-market__hero-offer-card strong,
+.brand-market__hero-deal-card strong,
+.brand-market__hero-routine-step strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.brand-market__content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--brand-section-gap) + 6px);
+  width: min(100%, var(--brand-shell-max-width));
+  margin: 0 auto;
+  padding: 8px 24px 96px;
+}
+
+.brand-market__content[data-brand-module-density="compact"] {
+  gap: calc(var(--brand-section-gap) * 0.72);
+}
+
+.brand-market__content[data-brand-module-density="compact"] .brand-market__module,
+.brand-market__content[data-brand-module-density="compact"] .brand-market__footer {
+  padding: clamp(16px, 1.3vw, 22px);
+}
+
+.brand-market__content[data-brand-module-density="expanded"] {
+  gap: calc(var(--brand-section-gap) * 1.18);
+}
+
+.brand-market__content[data-brand-module-density="expanded"] .brand-market__module,
+.brand-market__content[data-brand-module-density="expanded"] .brand-market__footer {
+  padding: clamp(24px, 2.4vw, 34px);
+}
+
+.brand-market__module,
+.brand-market__footer {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: var(--brand-radius-lg);
+  background: var(--brand-shell-fill);
+  box-shadow: var(--brand-card-shadow);
+  backdrop-filter: blur(16px);
+}
+
+.brand-market__module[data-section],
+.brand-market__footer[data-section] {
+  scroll-margin-top: 120px;
+}
+
+.brand-market__module {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: clamp(24px, 2.2vw, 34px);
+}
+
+.brand-market__module:hover,
+.brand-market__collection-card:hover,
+.brand-market__benefit-card:hover,
+.brand-market__proof-card:hover,
+.brand-market__value-card:hover,
+.brand-market__policy-card:hover,
+.brand-market__campaign-card:hover,
+.brand-market__category-card:hover,
+.brand-market__banner-card:hover {
+  border-color: rgba(43, 169, 168, 0.22);
+  box-shadow: 0 24px 52px rgba(148, 163, 184, 0.2);
+}
+
+.brand-market__module::before,
+.brand-market__footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--brand-accent) 32%, white 68%) 22%, transparent 100%);
+  opacity: 0.88;
+}
+
+.brand-market__section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand-market__section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 920px;
+}
+
+.brand-market__section-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--brand-ink);
+}
+
+.brand-market__final-cta-copy h2 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: #f8fafc;
+}
+
+.brand-market__section-heading p,
+.brand-market__collection-body p,
+.brand-market__benefit-card p,
+.brand-market__proof-card p,
+.brand-market__policy-card p,
+.brand-market__campaign-body p,
+.brand-market__story-card p,
+.brand-market__footer-brand p {
+  margin: 0;
+  color: var(--brand-ink-soft);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.brand-market__final-cta-copy p {
+  margin: 0;
+  color: rgba(248, 250, 252, 0.8);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.brand-market__promise-card,
+.brand-market__service-card,
+.brand-market__story-card {
+  padding: 24px 26px;
+  border-radius: var(--brand-radius-md);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 243, 236, 0.86));
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--brand-soft-shadow);
+}
+
+.brand-market__module--promise,
+.brand-market__module--story,
+.brand-market__module--service {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--brand-accent) 18%, transparent), transparent 30%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(18, 35, 55, 0.97) 56%, color-mix(in srgb, var(--brand-accent) 28%, rgba(15, 23, 42, 0.92)) 100%);
+  box-shadow: 0 28px 62px rgba(15, 23, 42, 0.18);
+}
+
+.brand-market__module--promise::after,
+.brand-market__module--story::after,
+.brand-market__module--service::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: -90px;
+  bottom: -100px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--brand-accent) 16%, transparent);
+  filter: blur(6px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.brand-market__module--promise .brand-market__section-eyebrow,
+.brand-market__module--story .brand-market__section-eyebrow,
+.brand-market__module--service .brand-market__section-eyebrow,
+.brand-market__module--promise .brand-market__benefit-eyebrow,
+.brand-market__module--story .brand-market__benefit-eyebrow,
+.brand-market__module--service .brand-market__benefit-eyebrow {
+  color: var(--brand-accent);
+}
+
+.brand-market__module--promise .brand-market__section-heading h2,
+.brand-market__module--story .brand-market__section-heading h2,
+.brand-market__module--service .brand-market__section-heading h2,
+.brand-market__module--promise .brand-market__section-heading p,
+.brand-market__module--story .brand-market__section-heading p,
+.brand-market__module--service .brand-market__section-heading p {
+  color: #f8fafc;
+}
+
+.brand-market__module--promise .brand-market__section-heading p,
+.brand-market__module--story .brand-market__section-heading p,
+.brand-market__module--service .brand-market__section-heading p {
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__module--promise .brand-market__promise-card,
+.brand-market__module--story .brand-market__story-card,
+.brand-market__module--service .brand-market__service-card {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: none;
+  max-width: 1040px;
+  backdrop-filter: blur(18px);
+}
+
+.brand-market__module--promise .brand-market__promise-card p {
+  color: #f8fafc;
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 38ch;
+}
+
+.brand-market__module--story .brand-market__story-card p,
+.brand-market__module--service .brand-market__service-card p,
+.brand-market__module--service .brand-market__service-meta {
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__module--service .brand-market__action--text {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: none;
+}
+
+.brand-market__module--values,
+.brand-market__module--proof,
+.brand-market__module--faq {
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--brand-accent) 8%, transparent), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 241, 233, 0.96));
+}
+
+.brand-market__benefit-grid,
+.brand-market__proof-grid,
+.brand-market__value-grid,
+.brand-market__collection-grid,
+.brand-market__policy-grid,
+.brand-market__campaign-grid,
+.brand-market__category-grid,
+.brand-market__metric-strip {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.brand-market__benefit-card,
+.brand-market__proof-card,
+.brand-market__value-card,
+.brand-market__policy-card,
+.brand-market__campaign-card,
+.brand-market__category-card,
+.brand-market__metric-card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: var(--brand-radius-md);
+  background: var(--brand-card-fill);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--brand-soft-shadow);
+  color: var(--brand-ink);
+}
+
+.brand-market__collection-card {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: minmax(190px, 0.92fr) minmax(0, 1fr);
+  overflow: hidden;
+  border-radius: var(--brand-radius-md);
+  background: var(--brand-card-fill);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--brand-soft-shadow);
+  color: var(--brand-ink);
+}
+
+.brand-market__collection-media {
+  min-height: 220px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.brand-market__collection-media img,
+.brand-market__banner-media,
+.brand-market__campaign-media,
+.brand-market__benefit-media,
+.brand-market__proof-media,
+.brand-market__value-media,
+.brand-market__category-media,
+.brand-market__final-cta-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-market__collection-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 54px;
+  font-weight: 600;
+  color: var(--brand-ink-soft);
+}
+
+.brand-market__collection-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.brand-market__collection-body h3,
+.brand-market__benefit-card h3,
+.brand-market__proof-card h3,
+.brand-market__value-card h3,
+.brand-market__policy-card h3,
+.brand-market__campaign-body h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.18;
+  color: var(--brand-ink);
+}
+
+.brand-market__benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--brand-accent);
+  font-size: 22px;
+}
+
+.brand-market__proof-headline {
+  color: var(--brand-accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand-market__proof-card--voice {
+  position: relative;
+  gap: 14px;
+  padding-top: 24px;
+}
+
+.brand-market__proof-quote-mark {
+  position: absolute;
+  top: 18px;
+  inset-inline-end: 18px;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--brand-accent);
+  opacity: 0.28;
+}
+
+.brand-market__proof-signal {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--brand-accent-strong);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-market__collection-nav,
+.brand-market__quick-jump {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.brand-market__collection-nav-item,
+.brand-market__quick-jump-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 84px;
+  padding: 14px 16px;
+  text-align: left;
+  color: var(--brand-ink);
+  background: var(--brand-card-fill);
+  border-color: rgba(15, 23, 42, 0.14);
+  box-shadow: var(--brand-soft-shadow);
+}
+
+.brand-market__collection-nav-item span,
+.brand-market__quick-jump-item span {
+  color: var(--brand-ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.brand-market__quick-jump-item small {
+  color: var(--brand-ink-soft);
+}
+
+.brand-market__chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-market__chip,
+.brand-market__category-card {
+  color: var(--brand-ink);
+  background: var(--brand-card-fill);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.brand-market__chip {
+  padding: 10px 14px;
+}
+
+.brand-market__category-card {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.brand-market__category-media {
+  border-radius: 8px;
+  height: 150px;
+}
+
+.brand-market__preview-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 18px;
+  padding: 16px 20px;
+  border-radius: var(--brand-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f0f0f;
+  color: var(--brand-text);
+}
+
+.brand-market__preview-eyebrow {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+}
+
+.brand-market__preview-banner strong {
+  display: block;
+  font-size: 18px;
+}
+
+.brand-market__preview-banner p {
+  margin: 0;
+  max-width: 720px;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__product-track,
+.brand-market__product-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.brand-market__product-track {
+  align-items: stretch;
+  overflow-x: auto;
+  padding: 2px 2px 10px;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 2px;
+}
+
+.brand-market__product-item {
+  flex: 0 0 clamp(250px, 24vw, 320px);
+  display: flex;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.brand-market__product-item--lead {
+  flex-basis: clamp(280px, 30vw, 380px);
+}
+
+.brand-market__product-lead-card {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--brand-radius-md);
+  background:
+    linear-gradient(160deg, rgba(10, 10, 10, 0.96), rgba(26, 26, 26, 0.92));
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  text-align: left;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+button.brand-market__product-lead-card {
+  cursor: pointer;
+}
+
+.brand-market__product-lead-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.brand-market__product-lead-eyebrow {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__product-lead-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brand-market__product-lead-copy h3 {
+  margin: 0;
+  font-size: clamp(24px, 2.2vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.brand-market__product-lead-copy p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__product-lead-cta {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--brand-accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-market__product-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.brand-market__product-grid .brand-market__product-item {
+  grid-column: span 3;
+}
+
+.brand-market__product-grid--dense .brand-market__product-item {
+  grid-column: span 3;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] {
+  gap: 18px;
+  padding: clamp(20px, 2vw, 28px);
+}
+
+.brand-market__module--product-rail {
+  gap: 18px;
+  padding: clamp(20px, 2vw, 28px);
+}
+
+.brand-market .product-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 100%;
+  height: 100%;
+  border-radius: var(--brand-radius-md);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--brand-accent) 10%, transparent), transparent 34%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(241, 245, 249, 0.96));
+  background-color: #ffffff;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.14);
+  overflow: hidden;
+}
+
+.brand-market .product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 42px rgba(15, 23, 42, 0.18);
+}
+
+.brand-market .product-card__image-wrapper {
+  height: 236px;
+  border: 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 0;
+  box-shadow: none;
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--brand-accent) 7%, rgba(255, 255, 255, 0.94)), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
+}
+
+.brand-market .product-card__info {
+  gap: 10px;
+  padding: 16px 16px 18px;
+}
+
+.brand-market .product-card__title {
+  margin-top: 0 !important;
+  min-height: 44px;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.brand-market .product-card__rating {
+  margin-top: 0;
+}
+
+.brand-market .product-card__delivery {
+  gap: 8px;
+}
+
+.brand-market .product-card__delivery-text {
+  font-size: 13px;
+  color: var(--brand-accent-strong);
+}
+
+.brand-market .product-card__price-wrapper {
+  gap: 8px;
+}
+
+.brand-market .product-card__current-price {
+  color: #0f172a;
+}
+
+.brand-market .product-card__price-value {
+  font-size: 22px;
+}
+
+.brand-market .product-card__price-decimal,
+.brand-market .star-rating__label {
+  color: #0f172a;
+}
+
+.brand-market .product-card__stock-left {
+  color: var(--brand-accent-strong);
+}
+
+.brand-market .star-rating__star--empty {
+  color: #0f172a;
+  opacity: 0.18;
+}
+
+.brand-market .main-product-btn {
+  margin-top: 6px;
+}
+
+.brand-market .product-card__add-to-cart {
+  min-height: 44px;
+  margin-top: 0;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: var(--brand-button-radius);
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.brand-market .product-card__timer {
+  border-radius: 999px;
+}
+
+.brand-market .product-card__add-to-cart:hover {
+  border-color: transparent;
+  background: var(--brand-accent);
+  color: #ffffff;
+}
+
+.brand-market__collection-showcase,
+.brand-market__rail-layout,
+.brand-market__product-grid-shell,
+.brand-market__offer-mosaic {
+  display: grid;
+  gap: 18px;
+}
+
+.brand-market__collection-showcase {
+  grid-template-columns: minmax(340px, 1.08fr) minmax(0, 0.92fr);
+  align-items: stretch;
+}
+
+.brand-market__collection-feature,
+.brand-market__featured-product-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--brand-radius-lg);
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--brand-accent) 18%, transparent), transparent 34%),
+    linear-gradient(160deg, rgba(15, 23, 42, 0.96), rgba(16, 24, 39, 0.92) 54%, rgba(17, 34, 48, 0.96));
+  background-color: #111827;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.22);
+  color: #f8fafc;
+}
+
+.brand-market__collection-feature {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.1fr);
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.brand-market__collection-feature-media,
+.brand-market__featured-product-media {
+  position: relative;
+  min-height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+.brand-market__collection-feature-media::after,
+.brand-market__featured-product-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 8, 10, 0.06), rgba(6, 8, 10, 0.32));
+  pointer-events: none;
+}
+
+.brand-market__collection-feature-media img,
+.brand-market__featured-product-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-market__collection-feature-copy,
+.brand-market__featured-product-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 28px;
+  color: #f8fafc;
+}
+
+.brand-market__collection-feature-copy h3,
+.brand-market__featured-product-heading h3 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #f8fafc;
+}
+
+.brand-market__collection-feature-copy p,
+.brand-market__featured-product-heading p {
+  margin: 0;
+  color: rgba(248, 250, 252, 0.8);
+  line-height: 1.72;
+}
+
+.brand-market__collection-nav-item,
+.brand-market__chip,
+.brand-market__category-card {
+  color: var(--brand-ink);
+}
+
+.brand-market__collection-nav-item span,
+.brand-market__chip span,
+.brand-market__category-card span {
+  color: var(--brand-ink);
+}
+
+.brand-market__collection-feature-eyebrow,
+.brand-market__featured-product-eyebrow,
+.brand-market__rail-editorial-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-market__collection-feature-meta,
+.brand-market__collection-body-meta,
+.brand-market__featured-product-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-market__collection-feature-meta span,
+.brand-market__collection-body-meta span,
+.brand-market__featured-product-signals span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.brand-market__collection-feature-cta {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--brand-accent-strong);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+.brand-market__collection-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.brand-market__collection-card--supporting {
+  grid-column: auto;
+  grid-template-columns: 1fr;
+  min-height: 100%;
+}
+
+.brand-market__collection-card--supporting .brand-market__collection-media {
+  min-height: 180px;
+}
+
+.brand-market__collection-card--supporting .brand-market__collection-body {
+  gap: 14px;
+}
+
+.brand-market__rail-layout {
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  align-items: start;
+}
+
+.brand-market__module--product-rail .brand-market__rail-layout {
+  gap: 16px;
+}
+
+.brand-market__rail-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.brand-market__module--product-rail .brand-market__rail-column {
+  gap: 14px;
+}
+
+.brand-market__featured-product {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand-market__featured-product-shell {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.92fr) minmax(0, 1.08fr);
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-shell {
+  grid-template-columns: minmax(176px, 0.82fr) minmax(0, 1.18fr);
+}
+
+.brand-market__featured-product-media {
+  min-height: 100%;
+}
+
+.brand-market__featured-product-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  font-size: 72px;
+  color: #ffffff;
+}
+
+.brand-market__featured-product-badge {
+  position: absolute;
+  top: 18px;
+  inset-inline-start: 18px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.brand-market__featured-product-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-copy {
+  gap: 12px;
+  padding: 22px;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-heading {
+  gap: 10px;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-heading h3 {
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.08;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-heading p {
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.brand-market__featured-product-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-signals span {
+  min-height: 28px;
+  font-size: 11px;
+}
+
+.brand-market__featured-product-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.brand-market__featured-product-price strong {
+  font-size: clamp(24px, 2.4vw, 36px);
+  line-height: 1;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-price strong {
+  font-size: clamp(22px, 2vw, 30px);
+}
+
+.brand-market__featured-product-price span {
+  color: rgba(255, 255, 255, 0.54);
+  text-decoration: line-through;
+}
+
+.brand-market__featured-product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-market__module--product-rail .brand-market__featured-product-actions {
+  gap: 10px;
+}
+
+.brand-market__rail-editorial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px;
+  border-radius: var(--brand-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: var(--brand-card-fill);
+  box-shadow: var(--brand-soft-shadow);
+}
+
+.brand-market__rail-editorial-card h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.brand-market__rail-editorial-card p {
+  margin: 0;
+  color: color-mix(in srgb, var(--brand-muted) 86%, transparent);
+  line-height: 1.68;
+}
+
+.brand-market__product-grid-shell {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.brand-market__product-grid-shell .brand-market__featured-product-shell {
+  min-height: 100%;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__product-grid-shell {
+  gap: 16px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-shell {
+  grid-template-columns: minmax(176px, 0.82fr) minmax(0, 1.18fr);
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-copy {
+  gap: 12px;
+  padding: 22px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-heading {
+  gap: 10px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-heading h3 {
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.08;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-heading p {
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-signals span {
+  min-height: 28px;
+  font-size: 11px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-price strong {
+  font-size: clamp(22px, 2vw, 30px);
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__featured-product-actions {
+  gap: 10px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__product-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 2px 2px 8px;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 2px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .brand-market__product-grid .brand-market__product-item {
+  grid-column: auto;
+  flex: 0 0 clamp(220px, 21vw, 272px);
+  display: flex;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card {
+  min-height: 0;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__image-wrapper {
+  height: 188px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__info {
+  gap: 8px;
+  padding: 14px 14px 16px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__title {
+  min-height: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  -webkit-line-clamp: 1;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__delivery-text {
+  font-size: 12px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__current-price {
+  font-size: 14px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__price-value {
+  font-size: 19px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .main-product-btn {
+  margin-top: 2px;
+}
+
+.brand-market__module--product-grid[data-section-key="best-sellers"] .product-card__add-to-cart {
+  min-height: 40px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.brand-market__module--product-rail .brand-market__product-track {
+  gap: 16px;
+  padding: 2px 2px 8px;
+}
+
+.brand-market__module--product-rail .brand-market__product-item {
+  flex-basis: clamp(220px, 21vw, 272px);
+}
+
+.brand-market__module--product-rail .product-card {
+  min-height: 0;
+}
+
+.brand-market__module--product-rail .product-card__image-wrapper {
+  height: 188px;
+}
+
+.brand-market__module--product-rail .product-card__info {
+  gap: 8px;
+  padding: 14px 14px 16px;
+}
+
+.brand-market__module--product-rail .product-card__title {
+  min-height: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  -webkit-line-clamp: 1;
+}
+
+.brand-market__module--product-rail .product-card__delivery-text {
+  font-size: 12px;
+}
+
+.brand-market__module--product-rail .product-card__current-price {
+  font-size: 14px;
+}
+
+.brand-market__module--product-rail .product-card__price-value {
+  font-size: 19px;
+}
+
+.brand-market__module--product-rail .main-product-btn {
+  margin-top: 2px;
+}
+
+.brand-market__module--product-rail .product-card__add-to-cart {
+  min-height: 40px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.brand-market__banner-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.brand-market__offer-mosaic {
+  align-items: stretch;
+}
+
+.brand-market__offer-mosaic--split {
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+}
+
+.brand-market__offer-mosaic--single {
+  grid-template-columns: 1fr;
+}
+
+.brand-market__banner-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 36%);
+  overflow: hidden;
+  border-radius: var(--brand-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  min-height: 240px;
+  background: var(--brand-card-fill);
+  box-shadow: var(--brand-soft-shadow);
+}
+
+.brand-market__banner-card--feature {
+  min-height: 340px;
+  border-radius: var(--brand-radius-lg);
+}
+
+.brand-market__banner-card--supporting {
+  min-height: 160px;
+}
+
+.brand-market__banner-card--supporting .brand-market__banner-copy {
+  padding: 20px;
+}
+
+.brand-market__banner-card--supporting .brand-market__banner-copy h3 {
+  font-size: clamp(20px, 2vw, 28px);
+}
+
+.brand-market__banner-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+}
+
+.brand-market__banner-copy h3 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.05;
+}
+
+.brand-market__banner-value {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 0.95;
+  color: var(--brand-accent);
+  font-weight: 700;
+}
+
+.brand-market__banner-label {
+  color: rgba(248, 250, 252, 0.8);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand-market__campaign-card {
+  overflow: hidden;
+}
+
+.brand-market__campaign-media {
+  height: 240px;
+}
+
+.brand-market__campaign-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+}
+
+.brand-market__service-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand-market__faq-item {
+  padding: 20px;
+  border-radius: var(--brand-radius-md);
+  background: var(--brand-card-fill);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 24px rgba(148, 163, 184, 0.1);
+}
+
+.brand-market__faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.brand-market__faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.brand-market__faq-item p {
+  margin: 12px 0 0;
+  color: var(--brand-ink-soft);
+}
+
+.brand-market__final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 34%);
+  gap: 18px;
+  overflow: hidden;
+  border-radius: var(--brand-radius-lg);
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(22, 36, 60, 0.96) 48%, rgba(14, 95, 104, 0.94) 100%);
+  box-shadow: 0 26px 46px rgba(15, 23, 42, 0.22);
+  color: #f8fafc;
+}
+
+.brand-market__final-cta-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.brand-market__footer {
+  margin: 0 auto 24px;
+  width: min(100%, var(--brand-shell-max-width));
+  padding: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 243, 236, 0.9));
+}
+
+.brand-market__footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  gap: 24px;
+}
+
+.brand-market__footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.brand-market__footer-brand h2,
+.brand-market__footer-column h3 {
+  margin: 0;
+  color: var(--brand-ink);
+}
+
+.brand-market__footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.brand-market__footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brand-market__footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.brand-market__footer-legal {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand-market__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+@media (max-width: 900px) {
+  .brand-market__masthead-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-market__masthead-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .brand-market__masthead-link {
+    white-space: normal;
+  }
+}
+
+.brand-market__skeleton-hero,
+.brand-market__skeleton-block,
+.brand-market__skeleton-card {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  background-size: 240% 100%;
+  animation: brand-market-shimmer 1.6s linear infinite;
+  border-radius: 8px;
+}
+
+.brand-market__skeleton-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+  gap: 20px;
+  min-height: 380px;
+  padding: 20px;
+}
+
+.brand-market__skeleton-hero--story-collection,
+.brand-market__skeleton-hero--category-hub {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.brand-market__skeleton-hero--campaign-focus,
+.brand-market__skeleton-hero--deal-promo {
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+}
+
+.brand-market__skeleton-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand-market__skeleton-copy span,
+.brand-market__skeleton-copy strong,
+.brand-market__skeleton-copy small {
+  display: block;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.brand-market__skeleton-copy span {
+  width: 140px;
+  height: 18px;
+}
+
+.brand-market__skeleton-copy strong {
+  width: 88%;
+  height: 44px;
+}
+
+.brand-market__skeleton-copy small {
+  width: 72%;
+  height: 22px;
+}
+
+.brand-market__skeleton-media {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.brand-market__skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.brand-market__skeleton-block {
+  min-height: 160px;
+}
+
+.brand-market__skeleton-block--wide {
+  min-height: 220px;
+}
+
+.brand-market__skeleton-block--toolbar {
+  min-height: 92px;
+}
+
+.brand-market__skeleton-block--banner {
+  min-height: 260px;
+}
+
+.brand-market__skeleton-block--nav {
+  min-height: 120px;
+}
+
+.brand-market__skeleton-grid,
+.brand-market__skeleton-rail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.brand-market__skeleton-card {
+  min-height: 260px;
+}
+
+@keyframes brand-market-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -60% 0;
+  }
+}
+
+@media (max-width: 1180px) {
+  .brand-market__collection-showcase,
+  .brand-market__rail-layout,
+  .brand-market__product-grid-shell,
+  .brand-market__offer-mosaic--split {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-market__collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brand-market__product-grid .brand-market__product-item,
+  .brand-market__product-grid--dense .brand-market__product-item {
+    grid-column: span 4;
+  }
+
+  .brand-market__collection-card,
+  .brand-market__benefit-card,
+  .brand-market__proof-card,
+  .brand-market__value-card,
+  .brand-market__policy-card,
+  .brand-market__campaign-card,
+  .brand-market__category-card,
+  .brand-market__metric-card {
+    grid-column: span 6;
+  }
+
+  .brand-market__collection-nav,
+  .brand-market__quick-jump,
+  .brand-market__hero-story-cards,
+  .brand-market__hero-routine-steps,
+  .brand-market__hero-deal-stack,
+  .brand-market__hero-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .brand-market__preview-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-market__hero-system {
+    padding: 16px;
+  }
+
+  .brand-market__hero-system-shell--editorial,
+  .brand-market__hero-system-shell--commerce,
+  .brand-market__hero-system-shell--story,
+  .brand-market__hero-system-shell--campaign,
+  .brand-market__hero-system-shell--routine,
+  .brand-market__hero-system-shell--deal,
+  .brand-market__hero-system-shell--hub,
+  .brand-market__banner-card,
+  .brand-market__final-cta,
+  .brand-market__footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-market__content {
+    padding: 0 16px 48px;
+  }
+
+  .brand-market__footer {
+    margin: 0 auto 16px;
+  }
+
+  .brand-market__footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-market__collection-feature,
+  .brand-market__featured-product-shell,
+  .brand-market__banner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-market__collection-feature-media,
+  .brand-market__featured-product-media,
+  .brand-market__banner-media {
+    min-height: 260px;
+  }
+
+  .brand-market__collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-market__hero-copy h1 {
+    font-size: clamp(34px, 12vw, 56px);
+  }
+
+  .brand-market__hero-copy p {
+    font-size: 16px;
+  }
+
+  .brand-market__collection-card,
+  .brand-market__benefit-card,
+  .brand-market__proof-card,
+  .brand-market__value-card,
+  .brand-market__policy-card,
+  .brand-market__campaign-card,
+  .brand-market__category-card,
+  .brand-market__metric-card {
+    grid-column: span 12;
+  }
+
+  .brand-market__collection-card {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-market__product-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 6px;
+  }
+
+  .brand-market__product-grid .brand-market__product-item,
+  .brand-market__product-grid--dense .brand-market__product-item {
+    grid-column: auto;
+    flex: 0 0 clamp(250px, 78vw, 300px);
+    scroll-snap-align: start;
+  }
+
+  .brand-market__product-item--lead {
+    flex-basis: min(86vw, 320px);
+  }
+
+  .brand-market__collection-nav,
+  .brand-market__quick-jump,
+  .brand-market__hero-story-cards,
+  .brand-market__hero-routine-steps,
+  .brand-market__hero-deal-stack,
+  .brand-market__hero-hub-grid,
+  .brand-market__skeleton-grid,
+  .brand-market__skeleton-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-market__banner-card,
+  .brand-market__final-cta {
+    overflow: hidden;
+  }
+
+  .brand-market__skeleton-hero {
+    grid-template-columns: 1fr;
+    min-height: 320px;
+  }
+}
